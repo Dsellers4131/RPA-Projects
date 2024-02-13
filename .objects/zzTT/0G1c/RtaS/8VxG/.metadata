@@ -1,0 +1,16 @@
+﻿{
+  "Name": "SInsurancePayor",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "8VxGUBdSgU-z2Lb2QtUVaQ",
+  "Reference": "654IPjEEEkytN_BhpaXexA/8VxGUBdSgU-z2Lb2QtUVaQ",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-06T13:43:13.234392Z",
+  "Updated": "2023-09-06T13:43:50.5700411Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

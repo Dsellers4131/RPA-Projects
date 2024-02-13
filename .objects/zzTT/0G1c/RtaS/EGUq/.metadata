@@ -1,0 +1,16 @@
+﻿{
+  "Name": "PInsuranceCode",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "EGUqsOFpQ0mfrDPoyThVIg",
+  "Reference": "654IPjEEEkytN_BhpaXexA/EGUqsOFpQ0mfrDPoyThVIg",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-19T14:32:38.0458583Z",
+  "Updated": "2023-09-19T14:33:39.8667405Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,17 @@
+﻿{
+  "Id": "_PPrj3ytL0KXxfge82cBrg",
+  "Reference": "654IPjEEEkytN_BhpaXexA/_PPrj3ytL0KXxfge82cBrg",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Name": "Laboratory",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-07-16T17:10:16.9767615Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-16T17:10:16.9767615Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

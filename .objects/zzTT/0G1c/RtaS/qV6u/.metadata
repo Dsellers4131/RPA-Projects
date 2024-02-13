@@ -1,0 +1,16 @@
+﻿{
+  "Id": "qV6uhMnadkGe5XEsh6huLA",
+  "Reference": "654IPjEEEkytN_BhpaXexA/qV6uhMnadkGe5XEsh6huLA",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Name": "CassetteCount",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-07-16T17:10:15.5378473Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-16T17:10:15.5378473Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

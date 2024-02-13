@@ -1,0 +1,16 @@
+﻿{
+  "Name": "AttachementCategory",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "9TfPKy8sQUKalAH1GBWp2Q",
+  "Reference": "654IPjEEEkytN_BhpaXexA/9TfPKy8sQUKalAH1GBWp2Q",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-19T09:48:42.8192872Z",
+  "Updated": "2023-09-19T09:55:43.9970118Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

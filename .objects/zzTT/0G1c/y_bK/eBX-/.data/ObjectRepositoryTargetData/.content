@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="NrZTacKKAEeEsr9jm6UMtg" Reference="654IPjEEEkytN_BhpaXexA/eBX-eDjkE0mpd3bbk1FhWQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://oauth.vitalaxis.com/oauth2/authorize?client_id=48bb05b9-3adb-43c8-8704-3cf11b1eacd5&amp;redirect_uri=http%3A%2F%2Fsagis.vitalaxis.com%2FVALogin.aspx&amp;response_type=code&amp;scope=offline_access&amp;state=~~&amp;idp_hint=&amp;nonce=&amp;login_hint=cosourcingtest" DesignTimeRectangle="1620, 439, 250, 37" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='' aaname='' /&gt;" Guid="98db58f5-3a15-4c42-89fe-cfca92462b8c" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login | VitalAxis' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="1586, 439, 34, 37" FullSelectorArgument="&lt;webctrl idx='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='SPAN' class='icon' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAApCAYAAABZa1t7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJnSURBVFhHzZjLi9pQFMb9m+qi80dkVboUuuxmNnWV7ju0C1eOtHRTCq66GASlM1oxKjo+iI/6VnzgRCUiRnzi8jQ3czOxJU7L3NicxcclNzfw4zvfTU6uw8lfg5O/OZA912fv0lQpbXQ436o3EejsQoU6kOMZJX7tjcCPWALi8bgt8gTy9/J4wOv1Go4RqOl0Cvv93hZd/Zxp8vv9EAwGVTBaa0Jt9sD/kg4WCoUgnT7IGBawcDgMoigaGUMHppUSmWPFYpGA4XIsEolQMGQZi0ajUC6X8WXsAQybY7FYDCqVCg0/IscEQYBarYbPsUQiAY1Gw6KMjW/hM++CFxwH3EsX8J9uQd6arHtEOlgymYRms0lLyeKYIoLvFQE6hw8ffeB7f64Bui5FUMzWH5EOlkqloN1uEzA2x+6u3MBxPHyXjTn5mlfn3BCQfl/7mHQw8p3sdDrsGRMvVbfeBODucF4KgFt1zZc/mPuLdLBMJgPdbpc9Y1aDZbNZ6PV6bI61vrrUkqlgR+WCL3XzZ/+UDpbL5WAwGNDwP9ExzS1TIEP/6poOls/nYTgcsjl2CrBCoQCSJLFl7BRgpLMYjUa0lIgcK5VKMB6PCdjTHTtF+ElnMZlM2DJmpXQw0lnIsoyvH6tWq9pvJDrH6vU6zGYzGn5EjpGWZz6fs+1KK6WDkZZHURS2XWmldLBWqwWLxQJfxkgvtlwu8e1K0otpYNgcI73Yer3GtysJ2GazwedYv9+H7XaLL2MEbLfb0VKqjkWQnCiS7pVcP7zHvN8EiAr2n8GSjK1WKyNjduvoqbXd43N6vn8/puEXoFJHdd9ysNAAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e733feaab2f2a8a9b52c03cb257b2b99.png" xmlns="">0QQXZi_vvA06AsY6GWbqoVQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

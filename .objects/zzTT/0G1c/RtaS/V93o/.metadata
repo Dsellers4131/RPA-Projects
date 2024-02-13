@@ -1,0 +1,16 @@
+﻿{
+  "Id": "V93otE28eE6YJ6v5TEO6QQ",
+  "Reference": "654IPjEEEkytN_BhpaXexA/V93otE28eE6YJ6v5TEO6QQ",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Name": "FinishAccessionButton",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-07-16T17:10:16.3067137Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-16T17:10:16.3067137Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

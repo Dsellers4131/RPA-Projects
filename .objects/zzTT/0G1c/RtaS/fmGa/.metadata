@@ -1,0 +1,16 @@
+﻿{
+  "Name": "AddAttachment",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "fmGa5kRE6k-EgaD7-_YJSQ",
+  "Reference": "654IPjEEEkytN_BhpaXexA/fmGa5kRE6k-EgaD7-_YJSQ",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-08-26T15:55:02.4417755Z",
+  "Updated": "2023-08-27T08:04:26.703686Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

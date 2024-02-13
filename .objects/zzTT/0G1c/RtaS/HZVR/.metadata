@@ -1,0 +1,17 @@
+﻿{
+  "Name": "DisplayName",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "HZVRtHD51U268Memgxf0jg",
+  "Reference": "654IPjEEEkytN_BhpaXexA/HZVRtHD51U268Memgxf0jg",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-07-16T17:10:16.1366746Z",
+  "Updated": "2023-09-02T13:46:54.8731639Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

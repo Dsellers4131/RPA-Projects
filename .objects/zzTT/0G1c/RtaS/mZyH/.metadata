@@ -1,0 +1,16 @@
+﻿{
+  "Name": "PInsurancePayor",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "mZyHxeds80C5rXP_iTOmow",
+  "Reference": "654IPjEEEkytN_BhpaXexA/mZyHxeds80C5rXP_iTOmow",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-03T05:27:11.2232029Z",
+  "Updated": "2023-09-03T05:27:57.911469Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

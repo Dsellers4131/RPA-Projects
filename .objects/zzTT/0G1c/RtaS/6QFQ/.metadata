@@ -1,0 +1,17 @@
+﻿{
+  "Id": "6QFQtILxMUiexe4r3-qsDg",
+  "Reference": "654IPjEEEkytN_BhpaXexA/6QFQtILxMUiexe4r3-qsDg",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Name": "HomePhone",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-07-16T17:10:16.5736372Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-16T17:10:16.5736372Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

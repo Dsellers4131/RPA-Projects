@@ -1,0 +1,17 @@
+﻿{
+  "Id": "ZaWuxSfTck28iwKt6VHtpA",
+  "Reference": "654IPjEEEkytN_BhpaXexA/ZaWuxSfTck28iwKt6VHtpA",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Name": "Hospital/Facility",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-07-16T17:10:16.635172Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-16T17:10:16.635172Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

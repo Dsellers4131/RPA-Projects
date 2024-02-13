@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Priority",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "vMJ2hvDAR0WK8no4tYwNLQ",
+  "Reference": "654IPjEEEkytN_BhpaXexA/vMJ2hvDAR0WK8no4tYwNLQ",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-02T13:06:46.7243967Z",
+  "Updated": "2023-09-02T13:07:28.0158962Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

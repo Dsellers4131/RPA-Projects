@@ -1,0 +1,18 @@
+﻿{
+  "Name": "Gender",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "7FpSPcc4e0me0d1mN_GFeg",
+  "Reference": "654IPjEEEkytN_BhpaXexA/7FpSPcc4e0me0d1mN_GFeg",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-07-16T17:10:16.4451401Z",
+  "Updated": "2023-11-04T12:49:59.7384122Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

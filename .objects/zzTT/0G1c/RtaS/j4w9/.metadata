@@ -1,0 +1,16 @@
+﻿{
+  "Name": "SInsuranceCode",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "j4w9uywjA0avoRvll-SrSA",
+  "Reference": "654IPjEEEkytN_BhpaXexA/j4w9uywjA0avoRvll-SrSA",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-19T14:34:15.4200931Z",
+  "Updated": "2023-09-19T14:35:12.5631364Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

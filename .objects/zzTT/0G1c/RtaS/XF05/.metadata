@@ -1,0 +1,16 @@
+﻿{
+  "Name": "AttachementCategorybkp",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "XF05YdcWZEG_LyL6n1DYRw",
+  "Reference": "654IPjEEEkytN_BhpaXexA/XF05YdcWZEG_LyL6n1DYRw",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-08-26T15:57:28.2240247Z",
+  "Updated": "2023-09-19T09:55:16.1859723Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

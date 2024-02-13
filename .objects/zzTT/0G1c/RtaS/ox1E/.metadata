@@ -1,0 +1,16 @@
+﻿{
+  "Name": "RequisitionButton",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "ox1E8FRqq0qyFncnnLfCFw",
+  "Reference": "654IPjEEEkytN_BhpaXexA/ox1E8FRqq0qyFncnnLfCFw",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-25T17:32:30.2605156Z",
+  "Updated": "2023-09-25T17:34:03.9830577Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

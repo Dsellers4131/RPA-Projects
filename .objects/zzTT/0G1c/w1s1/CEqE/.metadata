@@ -1,0 +1,16 @@
+﻿{
+  "Name": "UserNameBeta",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "CEqERUZUbki0JlNfyFhoAg",
+  "Reference": "654IPjEEEkytN_BhpaXexA/CEqERUZUbki0JlNfyFhoAg",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/w1s1Z-_sTUWjiD-PKG7S-A",
+  "Created": "2023-08-22T15:58:52.1780582Z",
+  "Updated": "2023-08-22T16:00:35.7002272Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,16 @@
+﻿{
+  "Name": "SInsuranceAddress1",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "3rReMr_X5USkX4a9ZD5reA",
+  "Reference": "654IPjEEEkytN_BhpaXexA/3rReMr_X5USkX4a9ZD5reA",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-06T13:44:05.3090423Z",
+  "Updated": "2023-09-06T13:44:55.8283442Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

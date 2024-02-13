@@ -1,0 +1,16 @@
+﻿{
+  "Name": "PInsuracneCity",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "tTwo0SE2u0C3o89dU3EyKg",
+  "Reference": "654IPjEEEkytN_BhpaXexA/tTwo0SE2u0C3o89dU3EyKg",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-03T05:31:49.7665237Z",
+  "Updated": "2023-09-03T05:32:20.1419066Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

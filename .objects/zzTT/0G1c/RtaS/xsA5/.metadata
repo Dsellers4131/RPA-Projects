@@ -1,0 +1,16 @@
+﻿{
+  "Name": "FlagsOption",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "xsA5NpTn9k6JQk3eqDjz-Q",
+  "Reference": "654IPjEEEkytN_BhpaXexA/xsA5NpTn9k6JQk3eqDjz-Q",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-10-15T12:02:35.8870613Z",
+  "Updated": "2023-10-15T12:04:11.6725543Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

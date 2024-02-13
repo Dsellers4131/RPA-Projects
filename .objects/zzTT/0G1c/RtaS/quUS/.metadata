@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Select from dropdown",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "quUSIK5zaEGeL9iZrWWGWQ",
+  "Reference": "654IPjEEEkytN_BhpaXexA/quUSIK5zaEGeL9iZrWWGWQ",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-07-16T17:10:18.3425555Z",
+  "Updated": "2023-08-27T11:07:41.3690362Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

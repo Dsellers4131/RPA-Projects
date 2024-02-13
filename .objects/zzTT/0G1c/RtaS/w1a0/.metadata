@@ -1,0 +1,16 @@
+﻿{
+  "Name": "SInsuranceLastName",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "w1a0gzv-eUaCFtkPslEtyA",
+  "Reference": "654IPjEEEkytN_BhpaXexA/w1a0gzv-eUaCFtkPslEtyA",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-06T12:59:17.9144656Z",
+  "Updated": "2023-09-06T13:05:08.7325514Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

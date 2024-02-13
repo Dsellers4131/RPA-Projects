@@ -1,0 +1,16 @@
+﻿{
+  "Id": "FwE8fJ971UmNMFikUVf4Hg",
+  "Reference": "654IPjEEEkytN_BhpaXexA/FwE8fJ971UmNMFikUVf4Hg",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Name": "RuleOutSearch",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-07-19T16:44:40.0629704Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-19T16:46:25.3664315Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

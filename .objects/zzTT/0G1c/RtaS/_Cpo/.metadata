@@ -1,0 +1,16 @@
+﻿{
+  "Name": "SInsurancePolicy#",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "_CpoWK84PESFdslNlgqd7A",
+  "Reference": "654IPjEEEkytN_BhpaXexA/_CpoWK84PESFdslNlgqd7A",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-06T13:40:27.5107987Z",
+  "Updated": "2023-09-06T13:41:04.8505846Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

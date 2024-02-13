@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Insurance",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "EO7P1yXFSUuaXyyKYQuLOw",
+  "Reference": "654IPjEEEkytN_BhpaXexA/EO7P1yXFSUuaXyyKYQuLOw",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-03T05:34:15.9562359Z",
+  "Updated": "2023-11-04T12:25:22.2661542Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

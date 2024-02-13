@@ -1,0 +1,16 @@
+﻿{
+  "Name": "ClickCloseOption",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "R3bqXWZygESE1eZ7DiwXyw",
+  "Reference": "654IPjEEEkytN_BhpaXexA/R3bqXWZygESE1eZ7DiwXyw",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-10-15T12:08:40.991435Z",
+  "Updated": "2023-10-15T12:10:19.4580182Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

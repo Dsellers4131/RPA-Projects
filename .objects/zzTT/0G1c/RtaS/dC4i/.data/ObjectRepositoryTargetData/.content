@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="J41ih-V6TkWJwV2S5XI8Bw" Reference="654IPjEEEkytN_BhpaXexA/dC4is2q3NE6gRAqTSdNayw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://sagisbeta.vitalaxis.com/SiteInformation/VASiteInformationCommon.aspx?caseid=6628748&amp;actualtype=" CvType="CheckBox" DesignTimeRectangle="1078, 400, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl id='tblSiteInfo' tag='TABLE' /&gt;&lt;webctrl id='chkSiteMargins_{0}' tableRow='{1}' tag='INPUT' /&gt;&quot;, intSiteLocation, intTablerow)]" FuzzySelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tag='IFRAME' /&gt;&lt;webctrl id='tblSiteInfo' tag='TABLE' /&gt;&lt;webctrl id='chkSiteMargins_2' type='checkbox' tag='INPUT' class='NoReportData validateinputcontrols DataNotNotify' aaname='' /&gt;" Guid="926f908d-ee0c-4dcc-867f-4fc34067c784" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="97765eb90e886bbecddc425812e07f62.png" xmlns="">0bsOvvD4CWEqmskJoVMAUEQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="2">
+      <ObjectRepositoryVariableData DefaultValue="2" Name="intSiteLocation" />
+      <ObjectRepositoryVariableData DefaultValue="4" Name="intTablerow" />
+    </scg:List>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

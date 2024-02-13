@@ -1,0 +1,16 @@
+﻿{
+  "Name": "CheckBoxRequistition",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "qlsdQQ2A0kO6reL0o91tLQ",
+  "Reference": "654IPjEEEkytN_BhpaXexA/qlsdQQ2A0kO6reL0o91tLQ",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-11-09T17:33:08.6522568Z",
+  "Updated": "2023-11-09T17:33:56.8639642Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,16 @@
+﻿{
+  "Name": "PInsuranceRelationship",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "erX-qn-SpUG5lxJaMtWo-A",
+  "Reference": "654IPjEEEkytN_BhpaXexA/erX-qn-SpUG5lxJaMtWo-A",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-03T05:18:45.1363734Z",
+  "Updated": "2023-09-03T05:20:09.7027033Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

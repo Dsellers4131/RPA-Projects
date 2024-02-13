@@ -1,0 +1,16 @@
+﻿{
+  "Name": "SaveButtonSelfPay",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "zRIIzZOBaEScfWJO3MzC-g",
+  "Reference": "654IPjEEEkytN_BhpaXexA/zRIIzZOBaEScfWJO3MzC-g",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-10-15T12:06:37.5498162Z",
+  "Updated": "2023-10-15T12:07:26.1654408Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

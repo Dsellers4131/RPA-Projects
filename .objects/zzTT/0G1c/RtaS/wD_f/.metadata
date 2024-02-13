@@ -1,0 +1,16 @@
+﻿{
+  "Name": "PInsuranceGroup#Contract",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "wD_ffDxFnkaBnf3SG5eLfw",
+  "Reference": "654IPjEEEkytN_BhpaXexA/wD_ffDxFnkaBnf3SG5eLfw",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-06T12:54:41.5885901Z",
+  "Updated": "2023-09-06T12:55:44.5899004Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

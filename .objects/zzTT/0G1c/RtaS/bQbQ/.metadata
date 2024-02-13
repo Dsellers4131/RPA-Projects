@@ -1,0 +1,16 @@
+﻿{
+  "Name": "PInsuranceZipCode",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "bQbQV976SEynEGXrFIXyzw",
+  "Reference": "654IPjEEEkytN_BhpaXexA/bQbQV976SEynEGXrFIXyzw",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-03T05:33:25.7521243Z",
+  "Updated": "2023-09-03T05:33:59.480854Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

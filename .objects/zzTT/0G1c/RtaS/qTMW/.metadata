@@ -1,0 +1,16 @@
+﻿{
+  "Name": "PInsurance",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "qTMW6aF20kuY2QoCw5kBKA",
+  "Reference": "654IPjEEEkytN_BhpaXexA/qTMW6aF20kuY2QoCw5kBKA",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-03T05:35:04.7129592Z",
+  "Updated": "2023-09-03T05:35:49.0932887Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,17 @@
+﻿{
+  "Id": "eBX-eDjkE0mpd3bbk1FhWQ",
+  "Reference": "654IPjEEEkytN_BhpaXexA/eBX-eDjkE0mpd3bbk1FhWQ",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/y_bK2bOgF06PlAih9w0Ltw",
+  "Name": "PasswordInputValue",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-07-16T17:10:19.6744316Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-16T17:10:19.6744316Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

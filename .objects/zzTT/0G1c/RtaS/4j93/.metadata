@@ -1,0 +1,16 @@
+﻿{
+  "Name": "PInsuranceGender",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "4j93Rq9jK0-SAiRGJFz9tA",
+  "Reference": "654IPjEEEkytN_BhpaXexA/4j93Rq9jK0-SAiRGJFz9tA",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-03T05:29:09.7225055Z",
+  "Updated": "2023-09-03T05:29:46.0329677Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

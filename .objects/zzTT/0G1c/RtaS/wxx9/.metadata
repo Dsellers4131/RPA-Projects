@@ -1,0 +1,16 @@
+﻿{
+  "Name": "PInsuranceState",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "wxx9wCOXOkmQoF-9icdZ3w",
+  "Reference": "654IPjEEEkytN_BhpaXexA/wxx9wCOXOkmQoF-9icdZ3w",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-03T05:32:31.5422365Z",
+  "Updated": "2023-09-03T05:33:11.2403226Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,16 @@
+﻿{
+  "Id": "SCaIO2t9rUSOa-wKBtgSwQ",
+  "Reference": "654IPjEEEkytN_BhpaXexA/SCaIO2t9rUSOa-wKBtgSwQ",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Name": "SelectRuleOutOption",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-07-19T16:47:39.4207589Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-19T18:47:16.8436006Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,16 @@
+﻿{
+  "Name": "SInsuranceCity",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "DhVskyEup0qntnucFUOhTw",
+  "Reference": "654IPjEEEkytN_BhpaXexA/DhVskyEup0qntnucFUOhTw",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-06T13:46:18.2005211Z",
+  "Updated": "2023-09-06T13:46:52.5289972Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

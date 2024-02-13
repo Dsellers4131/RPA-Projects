@@ -1,0 +1,16 @@
+﻿{
+  "Name": "SInsuranceDOB",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "VkEHSv2IFkC0G4vVyEduow",
+  "Reference": "654IPjEEEkytN_BhpaXexA/VkEHSv2IFkC0G4vVyEduow",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Created": "2023-09-06T13:54:09.8181313Z",
+  "Updated": "2023-09-06T13:55:03.9884367Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

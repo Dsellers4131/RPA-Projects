@@ -1,0 +1,16 @@
+﻿{
+  "Id": "6LFmhabZAUqVypX4y53W6A",
+  "Reference": "654IPjEEEkytN_BhpaXexA/6LFmhabZAUqVypX4y53W6A",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Name": "SiteNotSubmittedCheckBox",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-07-16T17:10:18.8584437Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-16T17:10:18.8584437Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

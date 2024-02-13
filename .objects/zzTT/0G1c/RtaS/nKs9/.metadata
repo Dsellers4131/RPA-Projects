@@ -1,0 +1,16 @@
+﻿{
+  "Id": "nKs9hDvSb0OOmXelymFSyQ",
+  "Reference": "654IPjEEEkytN_BhpaXexA/nKs9hDvSb0OOmXelymFSyQ",
+  "ParentRef": "654IPjEEEkytN_BhpaXexA/RtaS1aHTJUO78DINXQRdgg",
+  "Name": "Save",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-07-30T14:45:01.9309337Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-07-30T14:46:16.671385Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

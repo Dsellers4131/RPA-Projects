@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="bHEbJ0LKy0edDHo3ve7vQw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CvElementArea="471, 435, 86, 25" CvTextArea="491, 440, 30, 15" CvTextArgument="Open" CvType="Button" DesignTimeRectangle="470, 434, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' check:text='unchecked' /&gt;" Guid="0978e86d-6b30-49c6-ae44-91816e73b4c9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAeCAYAAAChf3k/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFpSURBVGhD7ZbBsYMgEIbpiW7owA7ejVZohSre2Q7sYCMIhkVMnBEXyOzhOwCLMR/LP4plWYChg4UTw8KJQcLF3z/zAMgxGhSKmfsgx2gQCuZ5ZirAwm9gjIFpmoprZ7DwG7BwYlg4MeMJNwqEEDtS23Jdp4wl3MuWoG2cs6DlWNIHEr7JVSabtxqkUGDSuY4ZR/ipWHcQsesNKHcDjKstRI5/Royj+KywR7+j6skbkwqPv/cJX9dMuNRgD2tp5zt564vGOi84O4wYR2s8bWLDHmX2+fdh1Cfv8JLkyF7TTPjVDt8zfv2DKhwG6u6Al5zvOT6jJqVIQe8UQOtNhF/K8FxWsuf0wNoLd5zJ9mtthK8crruTk2ZuNj4cRimf+xDuKMn2882EO7LvcNzxmyylZHk9j5VOIuUbbYV/5FlZNWDhxLBwYn5MeP+wcGJY+ABcFs7UBTlGg0Ixcx/kOB0wz8PCiWHhpCzwAuJ1RoEAOUiCAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="138, 409, 54, 15" ElementType="Text" FriendlyName="'File &amp;name'" FullSelectorArgument="&lt;wnd ctrlid='1090' title='File &amp;amp;name:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1090' title='File &amp;amp;name:' check:text='File &amp;amp;name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAATCAYAAADBGB7WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEASURBVFhH7VPRFcMgCHQq52EbhnEXZ3EDKokmaIkmTT8a68e9hwaOuwgmhED/gGl0NEyjo0EYdQTGkBGw6Cl4JGssoc85OX4WKqM9E9Poz+OEUXlf5SxjnUcdyBV1jJSPUK5D+u5gXxMDrqxxOze4QB6tyqFqcLGfRfI5J6K5o9zg2KiMIyJ5IUByZhMsoPVDNt5Yk4UuNcJcwXGggXPaRkWRei/i4k8mbK+i1SrnZGKF0qPHcUrDiptGtdeR6InM9Z7QKj0ucbRxY0c5rvblDTWnOMvxWgRrPXpnjhUNXx1d/laPzqXR5VdMdRYIPnlRPmsa2kbHxjQ6GqbRsRDoBaFqBwMxkChkAAAAAElFTkSuQmCC" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="7d5775f0f20c8ee54ad9c4abb6ac37d3.png" xmlns="">03TadNFOBNkO2XcLtUEUiUg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="lChy4xcq6EeijntN0H9vCA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="201, 410, 237, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' aaname='File name:' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' aaname='File name:' cls='Edit' /&gt;" Guid="c5c57cf6-b2cd-42fe-89c4-8f244e8c37f3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPEAAAATCAYAAABBR+uAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVHhe7dNBDQAwEASh8296+6uHScADNyBNYoj7ie98hiKJIU5iiJMY4iSGOIkhTmKIkxjiJIY4iSFOYoiTGOIkhjiJIU5iiDMX4iSGtO0BZeAby95jgTsAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="2468e8e606fee9a9a1e83d2e11503153.png" xmlns="">0hq-WOPAfxkqLklDfBXV6vA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
