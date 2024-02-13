@@ -177,11 +177,7 @@
         <Variable x:TypeArguments="ui:BusinessRuleException" Name="BusinessRuleException" />
         <Variable x:TypeArguments="x:String" Default="https://sagis.vitalaxis.com" Name="strBaseURL" />
         <Variable x:TypeArguments="njl:JObject" Name="ConfigJObject" />
-        <Variable x:TypeArguments="x:String" Name="ForEachFolderPath">
-          <Variable.Default>
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;S:\SagisDX\All\RPA Accessioning\Scan Test Kodak\&quot; +system.datetime.now.tostring(&quot;MMM&quot;) +&quot; &quot;+ system.datetime.now.ToString(&quot;yyyy&quot;)+&quot;\&quot;+ system.datetime.now.ToString(&quot;M.d.yy&quot;)" />
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="x:String" Default="[&quot;S:\SagisDX\All\RPA Accessioning\Scan Test Kodak\&quot; +system.datetime.now.tostring(&quot;MMM&quot;) +&quot; &quot;+ system.datetime.now.ToString(&quot;yyyy&quot;)+&quot;\&quot;+ system.datetime.now.ToString(&quot;M.d.yy&quot;)]" Name="ForEachFolderPath" />
         <Variable x:TypeArguments="x:String" Name="formJSON" />
         <Variable x:TypeArguments="x:Int32" Name="IntPdfFileCount" />
         <Variable x:TypeArguments="x:String" Name="strAddAnother" />
@@ -428,7 +424,7 @@
                   <Sequence sap2010:WorkflowViewState.IdRef="Sequence_366" />
                 </If.Else>
               </If>
-              <ui:ForEachFileX sap2010:Annotation.AnnotationText="&quot;S:\SagisDX\All\RPA Accessioning\Scan Test Kodak\&quot; + system.datetime.now.ToString(&quot;M.d.yy&quot;)&#xD;&#xA;&quot;S:\SagisDX\All\RPA Accessioning\Scan Test Kodak\&quot; +system.datetime.now.tostring(&quot;MMM&quot;) +&quot; &quot;+ system.datetime.now.ToString(&quot;yyyy&quot;)+&quot;\&quot;+ system.datetime.now.ToString(&quot;M.d.yy&quot;)" DisplayName="For Each File in Folder" Folder="[ForEachFolderPath]" sap:VirtualizedContainerService.HintSize="637,2879" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+              <ui:ForEachFileX sap2010:Annotation.AnnotationText="&quot;S:\SagisDX\All\RPA Accessioning\Scan Test Kodak\&quot; + system.datetime.now.ToString(&quot;M.d.yy&quot;)&#xA;&quot;S:\SagisDX\All\RPA Accessioning\Scan Test Kodak\&quot; +system.datetime.now.tostring(&quot;MMM&quot;) +&quot; &quot;+ system.datetime.now.ToString(&quot;yyyy&quot;)+&quot;\&quot;+ system.datetime.now.ToString(&quot;M.d.yy&quot;)" DisplayName="For Each File in Folder" Folder="[ForEachFolderPath]" sap:VirtualizedContainerService.HintSize="637,2879" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
                 <ui:ForEachFileX.Body>
                   <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                     <ActivityAction.Argument1>
@@ -2830,7 +2826,7 @@
                             <av:Size x:Key="ShapeSize">200,183</av:Size>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence sap2010:Annotation.AnnotationText="* Read qeaue 2 with captured scanned document details &#xA;* Login VitalDX&#xA;* Validate ticket number&#xA;* Enter details and create Accession" DisplayName="Vital DX  BOT" sap:VirtualizedContainerService.HintSize="200,183" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                        <Sequence sap2010:Annotation.AnnotationText="* Read qeaue 2 with captured scanned document details &#xA;* Login VitalDX&#xA;* Validate ticket number&#xA;* Enter details and create Accession" DisplayName="Vital DX  BOT" sap:VirtualizedContainerService.HintSize="1005,1032" sap2010:WorkflowViewState.IdRef="Sequence_81">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
