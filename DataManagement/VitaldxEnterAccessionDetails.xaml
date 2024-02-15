@@ -3,11 +3,13 @@
     <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+    <x:Property Name="arg_FirstName" Type="InOutArgument(x:String)" />
+    <x:Property Name="arg_LastName" Type="InOutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>3596,28737</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>3596,29124</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VitaldxEnterAccessionDetails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -146,7 +148,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="VitaldxEnterAccessionDetails" sap:VirtualizedContainerService.HintSize="3606,28672" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="VitaldxEnterAccessionDetails" sap:VirtualizedContainerService.HintSize="3606,29059" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="njl:JObject" Name="ConfigJObject" />
       <Variable x:TypeArguments="sd2:DataTable" Name="dt_RequisitionDetails" />
@@ -195,13 +197,13 @@
         <InArgument x:TypeArguments="x:String">[ConfigJObject.Item("SagisPortalURL").ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="VitalDX" sap:VirtualizedContainerService.HintSize="3544,28138" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="49b5cce4-e299-4c6c-af87-356e10714e1a" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="VitalDX" sap:VirtualizedContainerService.HintSize="3544,28525" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="49b5cce4-e299-4c6c-af87-356e10714e1a" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="3510,27921" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="3510,28308" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="outSelection" />
               <Variable x:TypeArguments="x:Boolean" Name="boolIndicator" />
@@ -1871,7 +1873,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <Sequence sap2010:Annotation.AnnotationText="* Check and validate collection method from procedure" DisplayName="Seq - Check collection method" sap:VirtualizedContainerService.HintSize="1062,1286" sap2010:WorkflowViewState.IdRef="Sequence_39">
+              <Sequence sap2010:Annotation.AnnotationText="* Check and validate collection method from procedure" DisplayName="Seq - Check collection method" sap:VirtualizedContainerService.HintSize="1206,1286" sap2010:WorkflowViewState.IdRef="Sequence_39">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="s:String[]" Name="CollectionMethods" />
                   <Variable x:TypeArguments="x:Boolean" Name="boolMatch" />
@@ -2082,8 +2084,6 @@
             <Sequence DisplayName="Patient Information" sap:VirtualizedContainerService.HintSize="3448,4073" sap2010:WorkflowViewState.IdRef="Sequence_171">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Int32" Name="intCount" />
-                <Variable x:TypeArguments="x:String" Name="FirstName" />
-                <Variable x:TypeArguments="x:String" Name="LastName" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2519,7 +2519,7 @@
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
                       <ui:AssignOperation.To>
-                        <OutArgument x:TypeArguments="x:String">[FirstName]</OutArgument>
+                        <OutArgument x:TypeArguments="x:String">[arg_FirstName]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
                         <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("FirstName").ToString]</InArgument>
@@ -2527,7 +2527,7 @@
                     </ui:AssignOperation>
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
                       <ui:AssignOperation.To>
-                        <OutArgument x:TypeArguments="x:String">[LastName]</OutArgument>
+                        <OutArgument x:TypeArguments="x:String">[arg_LastName]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
                         <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("LastName").ToString]</InArgument>
@@ -3239,7 +3239,7 @@
                 </If.Else>
               </If>
             </Sequence>
-            <If Condition="[str_BillPay IsNot &quot;INSURANCE&quot;]" DisplayName="If - Check bill type to enter details" sap:VirtualizedContainerService.HintSize="3448,9327" sap2010:WorkflowViewState.IdRef="If_36">
+            <If Condition="[str_BillPay IsNot &quot;INSURANCE&quot;]" DisplayName="If - Check bill type to enter details" sap:VirtualizedContainerService.HintSize="3448,9714" sap2010:WorkflowViewState.IdRef="If_36">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3295,20 +3295,20 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="3110,8126" sap2010:WorkflowViewState.IdRef="Sequence_122">
+                <Sequence sap:VirtualizedContainerService.HintSize="3110,8513" sap2010:WorkflowViewState.IdRef="Sequence_122">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Seq - Add Insurance Details" sap:VirtualizedContainerService.HintSize="3068,8038" sap2010:WorkflowViewState.IdRef="Sequence_250">
+                  <Sequence DisplayName="Seq - Add Insurance Details" sap:VirtualizedContainerService.HintSize="3068,8425" sap2010:WorkflowViewState.IdRef="Sequence_250">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="2662,52" sap2010:WorkflowViewState.IdRef="CommentOut_21">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="3006,52" sap2010:WorkflowViewState.IdRef="CommentOut_21">
                       <ui:CommentOut.Body>
                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="748,2743" sap2010:WorkflowViewState.IdRef="Sequence_249">
                           <sap:WorkflowViewStateService.ViewState>
@@ -4257,7 +4257,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:CommentOut>
-                    <If Condition="[in_TransactionItem.SpecificContent(&quot;PrimaryInsurance_Relationship&quot;).ToString&lt;&gt; string.Empty OR in_TransactionItem.SpecificContent(&quot;SecondaryInsurance_Relationship&quot;).ToString&lt;&gt; string.Empty AND in_TransactionItem.SpecificContent(&quot;PrimaryInsurance_Relationship&quot;).ToString.Trim&lt;&gt; string.Empty AND in_TransactionItem.SpecificContent(&quot;PrimaryInsurance_SubscriberName&quot;).ToString.Trim &lt;&gt; String.Empty AND in_TransactionItem.SpecificContent(&quot;PrimaryInsurance_CompanyName&quot;).ToString.Trim &lt;&gt; string.Empty AND in_TransactionItem.SpecificContent(&quot;PrimaryInsurance_MemberID&quot;).ToString.Trim &lt;&gt; string.Empty]" DisplayName="If - Check if insurance present  and open Insurance" sap:VirtualizedContainerService.HintSize="3006,7835" sap2010:WorkflowViewState.IdRef="If_40">
+                    <If Condition="[in_TransactionItem.SpecificContent(&quot;PrimaryInsurance_Relationship&quot;).ToString&lt;&gt; string.Empty OR in_TransactionItem.SpecificContent(&quot;SecondaryInsurance_Relationship&quot;).ToString&lt;&gt; string.Empty AND in_TransactionItem.SpecificContent(&quot;PrimaryInsurance_Relationship&quot;).ToString.Trim&lt;&gt; string.Empty AND in_TransactionItem.SpecificContent(&quot;PrimaryInsurance_SubscriberName&quot;).ToString.Trim &lt;&gt; String.Empty AND in_TransactionItem.SpecificContent(&quot;PrimaryInsurance_CompanyName&quot;).ToString.Trim &lt;&gt; string.Empty AND in_TransactionItem.SpecificContent(&quot;PrimaryInsurance_MemberID&quot;).ToString.Trim &lt;&gt; string.Empty]" DisplayName="If - Check if insurance present  and open Insurance" sap:VirtualizedContainerService.HintSize="3006,8222" sap2010:WorkflowViewState.IdRef="If_40">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4265,18 +4265,18 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="2972,7422" sap2010:WorkflowViewState.IdRef="Sequence_218">
+                        <Sequence sap:VirtualizedContainerService.HintSize="2972,7809" sap2010:WorkflowViewState.IdRef="Sequence_218">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Insurance'" sap:VirtualizedContainerService.HintSize="2586,157" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="49b5cce4-e299-4c6c-af87-356e10714e1a" Version="V3">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Insurance'" sap:VirtualizedContainerService.HintSize="2930,157" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="49b5cce4-e299-4c6c-af87-356e10714e1a" Version="V3">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://sagisbeta.vitalaxis.com/VAAccession.aspx?type=accession&amp;action=add&amp;currentListPageDetails=%7Cstatus%7C%7Casc%7CBarcode%7Ccases%7C%7C%7C%7C%7C%7C%7C%7C%7Cfalse%7C%7Cfalse%7C%7C%7C%7C228%7C%7C%7Ctrue%7C0%7C%7C%7C%7C%7C%7C" ContentHash="AZSTBMHa6EG-rgYOX6_TGw" CvTextArgument="Insurance" CvType="Text" DesignTimeRectangle="12, 606, 75, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl tableRow='113' tag='TABLE' /&gt;&lt;webctrl parentid='CollapsiblePanelTab' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='CollapsiblePanelTab' type='' tag='SPAN' class='' aaname='Insurance' check:innerText='Insurance' /&gt;" Guid="8e68eb4b-bcce-416c-b456-c9a1c0bace99" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAYCAYAAAC7v6DJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP+SURBVFhH7VYxaNtAFJW3Dh1c6OBChwY6NNCh2WLoUkOGGjrU0MWQoYgOxXQIJkMQXYLpUESHYDoY0SEgDwZ1CChDQFkM9hCQh4AyFOTBww0dNGQQiZO8/vOdaluJGznuqAcf6e7f//fv3f93pyDFnZGStwBS8hZASt4CSMlbACl5CyAlbwHMJu/Uh9MyYR36CGVXimnMJm9go/pMwdKGDTaUfSmmMBd5IfPhnTAEYYhg4IP9npGTYQDW5+NkWyIkG+/EH/efMvjHHvzID9n5J9RmIcLfPvxBIPojnEq/sc1MHNdQ6P/OF4fUz7SPYQ7yAnS+FqAoS8g/V+grpLhtw4/mGgZwd6soSJ1yvwit5YmyJ13nC9nnyjB/CYOgW0OexpV3xdEQ9i2oT8gulxvZZ9+bwnfI0NlRsRL5fVJCbT86ThLERQiOTFRWx/rldR3OYDwgOLagrY31+U0TXmzv4piLPHcUpILCpgH70Iaxkad2AXpXzBL26ijyiT+R/sCC/n6JiFAFWUnJe8yDX4G6XYfVFv3sQCPi7qG0bcIhv7V3WSjPKrAHIy+3xoXAhf6a/L5QobccOM0aSjmK87MjsjjoQOfEZYuofqtD3yohR/5KDbnxMzB/5mXLME7k4tt88TmoLV+0JXmFLROdYyqlrg1z14LLSDlH5q1syUVJ8BL2eHkPeJm7sD5zsoicHre6Pa7wSB9VQ/nHRBXsVFH5KrKTx8H12Tca6j8MGDsaivepvS4zfwYWI6+rTy1+FFRDxTL1ifRfhvq9I4iYh7woIySCIwOVNVHKY/kHebG42H6VYlpGdY/v4nUI/aRvKW/r8E7loBvwX8kLepRpTRtunzKlbVJ58QVH5UPl9S1un4C8IYP1kcqf/Ggtd3QpeI2S8JuQPDFPFmpTtGkm+IcWzD3yR/OITKXxUWYmxH8kjwLaLeMeHdwVKpeQMs1t8HYetTYnj/RNFVkqp/KOA7fnwv7CSUhCHm3CwxL0fRed/TrKT3lmJCcPzIH2kmxeabDpVvbbBlS+tg+WKMtI/6ICs0e3NvNgN2owojNzBm4hL3ONvMyDWJCZzESQdPC+e4AM9UWS36QAo9Sng9v4mB/rHz8afafJy1wrW3ZAZ1Jkk3mE/Msl+q5AOxQZfWtcvI+X/mrkg+Qpje+NyeG3bXVtQk/+K827XhiUOfzN5fXHE4j31D/eaRzc7siB/dOGc8xumDwE69GN1yU/gXzXxd55Xvx9Rwj7Lpw9yliKJwyYuECkXaK4OMi/17bpJeDCvympeOz8kmtaFPtNA6ahXF1dIZW7SUreAjIi7/LyMpU7iBLvuLi4SCWhKNHPcDhMZU5Rzs/PMSlnZ2epJJIz/AESAgY5xNh20AAAAABJRU5ErkJggg==" InformativeScreenshot="9d2c37531164ed7076cd7d566912cc37.png" Reference="654IPjEEEkytN_BhpaXexA/EO7P1yXFSUuaXyyKYQuLOw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='VitalDx' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                             </uix:NClick.Target>
                           </uix:NClick>
-                          <Sequence DisplayName="Seq- Enter Insurance Details" sap:VirtualizedContainerService.HintSize="2930,7137" sap2010:WorkflowViewState.IdRef="Sequence_217">
+                          <Sequence DisplayName="Seq- Enter Insurance Details" sap:VirtualizedContainerService.HintSize="2930,7524" sap2010:WorkflowViewState.IdRef="Sequence_217">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4305,7 +4305,7 @@
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click  - Primary Insurance" sap:VirtualizedContainerService.HintSize="2386,157" sap2010:WorkflowViewState.IdRef="NClick_25" KeyModifiers="None" MouseButton="Left" Version="V3">
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click  - Primary Insurance" sap:VirtualizedContainerService.HintSize="2730,157" sap2010:WorkflowViewState.IdRef="NClick_25" KeyModifiers="None" MouseButton="Left" Version="V3">
                                       <uix:NClick.Target>
                                         <uix:TargetAnchorable BrowserURL="https://sagisbeta.vitalaxis.com/VAAccession.aspx?type=accession&amp;action=add&amp;currentListPageDetails=%7Cstatus%7C%7Casc%7CBarcode%7Ccases%7C%7C%7C%7C%7C%7C%7C%7C%7Cfalse%7C%7Cfalse%7C%7C%7C%7C228%7C%7C%7Ctrue%7C0%7C%7C%7C%7C%7C%7C" ContentHash="jxoZiV3lgkWLNp8BD2b3vw" CvTextArgument="Primary Insurance" CvType="Text" DesignTimeRectangle="14, 636, 317, 55" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl tableRow='113' tag='TABLE' /&gt;&lt;webctrl id='vTab1' tableRow='2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='vTab1' type='' tag='DIV' class='vtab vtabInsurance Selected' aaname='                                                           ' check:innerText='Primary Insurance' /&gt;" Guid="79ef35bd-4307-46ba-9b37-d16d124eebbb" ImageBase64="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" InformativeScreenshot="37412dfa79caf94e7f40601f1fae4a87.png" Reference="654IPjEEEkytN_BhpaXexA/qTMW6aF20kuY2QoCw5kBKA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='VitalDx' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                           <uix:TargetAnchorable.Anchors>
@@ -4929,7 +4929,7 @@
                                 </Sequence>
                               </If.Else>
                             </If>
-                            <If Condition="[in_TransactionItem.SpecificContent(&quot;SecondaryInsurance_Relationship&quot;).ToString.Trim &lt;&gt; string.Empty]" DisplayName="If - Check and Enter secondary insurance details" sap:VirtualizedContainerService.HintSize="2868,3929" sap2010:WorkflowViewState.IdRef="If_54">
+                            <If Condition="[in_TransactionItem.SpecificContent(&quot;SecondaryInsurance_Relationship&quot;).ToString.Trim &lt;&gt; string.Empty]" DisplayName="If - Check and Enter secondary insurance details" sap:VirtualizedContainerService.HintSize="2868,4316" sap2010:WorkflowViewState.IdRef="If_54">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4937,13 +4937,13 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="2566,3747" sap2010:WorkflowViewState.IdRef="Sequence_215">
+                                <Sequence sap:VirtualizedContainerService.HintSize="2566,4134" sap2010:WorkflowViewState.IdRef="Sequence_215">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Seq - Secondary Insurance" sap:VirtualizedContainerService.HintSize="2524,3659" sap2010:WorkflowViewState.IdRef="Sequence_214">
+                                  <Sequence DisplayName="Seq - Secondary Insurance" sap:VirtualizedContainerService.HintSize="2524,4046" sap2010:WorkflowViewState.IdRef="Sequence_214">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -5198,7 +5198,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:CommentOut>
-                                    <If Condition="[in_TransactionItem.SpecificContent(&quot;SecondaryInsurance_ZipCode&quot;).ToString &lt;&gt; string.Empty]" DisplayName="If - Enter Zip Code" sap:VirtualizedContainerService.HintSize="2462,2052" sap2010:WorkflowViewState.IdRef="If_48">
+                                    <If Condition="[in_TransactionItem.SpecificContent(&quot;SecondaryInsurance_ZipCode&quot;).ToString &lt;&gt; string.Empty]" DisplayName="If - Enter Zip Code" sap:VirtualizedContainerService.HintSize="2462,2439" sap2010:WorkflowViewState.IdRef="If_48">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -5206,7 +5206,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <If.Then>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="628,1870" sap2010:WorkflowViewState.IdRef="Sequence_200">
+                                        <Sequence sap:VirtualizedContainerService.HintSize="680,2257" sap2010:WorkflowViewState.IdRef="Sequence_200">
                                           <Sequence.Variables>
                                             <Variable x:TypeArguments="x:String" Name="SecondaryZipCode" />
                                           </Sequence.Variables>
@@ -5215,7 +5215,7 @@
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Assign sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_46">
+                                          <Assign sap:VirtualizedContainerService.HintSize="638,82" sap2010:WorkflowViewState.IdRef="Assign_46">
                                             <Assign.To>
                                               <OutArgument x:TypeArguments="x:String">[SecondaryZipCode]</OutArgument>
                                             </Assign.To>
@@ -5223,7 +5223,7 @@
                                               <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("SecondaryInsurance_ZipCode").ToString]</InArgument>
                                             </Assign.Value>
                                           </Assign>
-                                          <If Condition="[SecondaryZipCode.length = 5]" sap:VirtualizedContainerService.HintSize="586,1660" sap2010:WorkflowViewState.IdRef="If_61">
+                                          <If Condition="[SecondaryZipCode.length = 5]" sap:VirtualizedContainerService.HintSize="638,2047" sap2010:WorkflowViewState.IdRef="If_61">
                                             <If.Then>
                                               <Sequence sap:VirtualizedContainerService.HintSize="376,503" sap2010:WorkflowViewState.IdRef="Sequence_254">
                                                 <sap:WorkflowViewStateService.ViewState>
@@ -5248,12 +5248,12 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </uix:NTypeInto>
-                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '12455'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_36" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="49b5cce4-e299-4c6c-af87-356e10714e1a" Version="V3">
+                                                <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click '12455'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_36" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="49b5cce4-e299-4c6c-af87-356e10714e1a" Version="V3">
                                                   <uix:NClick.Target>
-                                                    <uix:TargetAnchorable BrowserURL="https://sagisbeta.vitalaxis.com/VAAccession.aspx?type=accession&amp;action=add&amp;currentListPageDetails=%7Cstatus%7C%7Casc%7CBarcode%7Ccases%7C%7C%7C%7C%7C%7C%7C%7C%7Cfalse%7C%7Cfalse%7C%7C%7C%7C111%7C%7C%7Ctrue%7C0%7C%7C%7C%7C%7C%7C%7C" CvElementArea="2286, 1018, 470, 23" CvType="InputBox" DesignTimeRectangle="2285, 1020, 466, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl id='ui-id-118' tag='A' /&gt;" FuzzyAccuracy="0.7" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tag='IFRAME' /&gt;&lt;webctrl id='ui-id-118' tag='A' type='' class='ui-corner-all ui-state-focus' aaname='{0}' check:innerText='{0}' /&gt;&quot;, SecondaryZipCode)]" Guid="c0519f13-dd79-4fe8-bd01-29f85c7f9d35" InformativeScreenshot="99e62479f25161329368d535817b4954.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='VitalDx' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                    <uix:TargetAnchorable BrowserURL="https://sagis.vitalaxis.com/VAAccession.aspx?type=accession&amp;action=edit&amp;caseid=6804366" CvElementArea="2284, 1224, 472, 22" CvType="InputBox" DesignTimeRectangle="415, 369, 18, 17" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl id='ui-id-122' tag='A' /&gt;" FuzzyAccuracy="0.7" FuzzyMatches="10000" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tag='IFRAME' /&gt;&lt;webctrl id='ui-id-122' tag='A' type='' class='ui-corner-all ui-state-focus' aaname='{0}' check:innerText='{0}' /&gt;&quot;, SecondaryZipCode)]" Guid="67b40631-0d94-487b-a161-e9b3ce2ed18f" InformativeScreenshot="d98bac88e7473b1c5ca7ab540c1e7d99.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='VitalDx' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                                                       <uix:TargetAnchorable.Anchors>
-                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                          <uix:Target CvElementArea="2282, 998, 470, 21" CvType="InputBox" DesignTimeRectangle="2284, 1000, 451, 19" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl idx='2' parentid='VtabContentMain' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='SubscribeInfo_txtZip2' tableRow='5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='VtabContentMain' tag='TABLE' /&gt;&lt;webctrl id='SubscribeInfo_txtZip2' type='text' tag='INPUT' class='highlight ui-autocomplete-input' aaname='' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                          <uix:Target CvElementArea="2285, 1203, 470, 21" CvType="InputBox" DesignTimeRectangle="416, 334, 16, 16" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl parentid='VtabInsuranceContent2' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='span-SubscribeInfo_txtZip2' tableRow='5' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='VtabInsuranceContent2' tag='TABLE' /&gt;&lt;webctrl id='span-SubscribeInfo_txtZip2' type='' tag='SPAN' class='AutocompleteDownarrow insurance spaninc' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAAZCAYAAADaILXQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHSSURBVEhL7ZTNTttAFIXnEbLMo4D5UwtEogEUVEGlSpQfiQ0FivhvVViy6RLbC9gXXoO3iEwkFErTYkcpJibEsp3DvUNMKXGBOo266ZE+zdi6c86dsTzi+FsJTP77D3y1bFjnDsoVF67nI6jV0IxEfUQQ1FC0L2GcWjg1z2WA5weoNREgEokEkskk2mfVpuhd2sWng8O67Y2kORO1IA53A+SxWJYVWRgH3kGo2zOPKoxLqP/mvxDq35kf0Q/1mPhnu78u1IPm/ct7Dwaw8Zvtg4Z1oW7NlbdqJKmV6AA2niDju7XtszuS8MoQPGEUSvwdvAPjiynrmIvLquy4obYewuI6EQQBXVpBY+E9UhxwcgbbuaKO9yNrQvOwCeF5HphOehmbuRs65FyTzTKiWq2C6ZlXm0CTYzcFdBHcrO/7EOVyGUz/ovbH9L1T0Vcfe4nnxLMFVTbrui6EaZowDAODy9qTGVr5CT+niRdLGgaI1KIKx3FQqVQgFEUBM7ahPZlX73UJz0fXiQ0dL9c0jBDDqzpKpRJs24ZIp9PIZDKY3tJjMUVMbuoY/6jj9Qcat3ZRKBRQLBYhfPqqrYADRNvMZ/xt2Dyfz7fOPJfLtc48m83iGhjQL4mqz/9IAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
                                                         </scg:List>
                                                       </uix:TargetAnchorable.Anchors>
                                                     </uix:TargetAnchorable>
@@ -5262,13 +5262,13 @@
                                               </Sequence>
                                             </If.Then>
                                             <If.Else>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="552,975" sap2010:WorkflowViewState.IdRef="Sequence_257">
+                                              <Sequence sap:VirtualizedContainerService.HintSize="604,1362" sap2010:WorkflowViewState.IdRef="Sequence_257">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <If Condition="[SecondaryZipCode.contains(&quot;CODE&quot;)]" sap:VirtualizedContainerService.HintSize="510,887" sap2010:WorkflowViewState.IdRef="If_64">
+                                                <If Condition="[SecondaryZipCode.contains(&quot;CODE&quot;)]" sap:VirtualizedContainerService.HintSize="562,1274" sap2010:WorkflowViewState.IdRef="If_64">
                                                   <If.Then>
                                                     <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_276">
                                                       <sap:WorkflowViewStateService.ViewState>
@@ -5279,13 +5279,13 @@
                                                     </Sequence>
                                                   </If.Then>
                                                   <If.Else>
-                                                    <Sequence sap:VirtualizedContainerService.HintSize="476,625" sap2010:WorkflowViewState.IdRef="Sequence_277">
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="528,1012" sap2010:WorkflowViewState.IdRef="Sequence_277">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_45">
+                                                      <Assign sap:VirtualizedContainerService.HintSize="486,82" sap2010:WorkflowViewState.IdRef="Assign_45">
                                                         <Assign.To>
                                                           <OutArgument x:TypeArguments="x:String">[SecondaryZipCode]</OutArgument>
                                                         </Assign.To>
@@ -5293,7 +5293,7 @@
                                                           <InArgument x:TypeArguments="x:String">[SecondaryZipCode.substring(0,5)]</InArgument>
                                                         </Assign.Value>
                                                       </Assign>
-                                                      <uix:NTypeInto ActivateBefore="{x:Null}" ClickBeforeMode="Single" DisplayName="Type Into  Zip Code" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_95" ScopeIdentifier="49b5cce4-e299-4c6c-af87-356e10714e1a" Text="[secondaryzipcode]" Version="V3">
+                                                      <uix:NTypeInto ActivateBefore="{x:Null}" ClickBeforeMode="Single" DisplayName="Type Into  Zip Code" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="486,218" sap2010:WorkflowViewState.IdRef="NTypeInto_95" ScopeIdentifier="49b5cce4-e299-4c6c-af87-356e10714e1a" Text="[secondaryzipcode]" Version="V3">
                                                         <uix:NTypeInto.Target>
                                                           <uix:TargetAnchorable BrowserURL="https://sagisbeta.vitalaxis.com/VAAccession.aspx?type=accession&amp;action=add&amp;currentListPageDetails=%7Cstatus%7C%7Casc%7CBarcode%7Ccases%7C%7C%7C%7C%7C%7C%7C%7C%7Cfalse%7C%7Cfalse%7C%7C%7C%7C244%7C%7C%7Ctrue%7C0%7C%7C%7C%7C%7C%7C" ContentHash="_6KUYzWu9ki8USYemeeL0w" CvType="InputBox" DesignTimeRectangle="1274, 564, 253, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl idx='2' parentid='VtabContentMain' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='SubscribeInfo_txtZip2' tableRow='5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='VtabContentMain' tag='TABLE' /&gt;&lt;webctrl id='SubscribeInfo_txtZip2' type='text' tag='INPUT' class='highlight ui-autocomplete-input' aaname='' /&gt;" Guid="704908a8-6c5e-46a5-a755-89396c61ea56" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQEAAAAZCAYAAAAxHpu/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADDSURBVHhe7dQhikIBFIVht+IObLMBdzLR6PCWYjNqsBtdx8AEk2ARDAbjHR6I4BMUbb7zfXDK5eZ/UC8713b5XcPRtNb7ywn4WG9EoOr4u6nFalPb0+UAfKybCDRNY2Y93tdkdrdrBNoHoN9EAMKJAIQTAQgnAhBOBCCcCEA4EYBw3QD87Q4iAEm6ERj/zEUAknQj0E4EIIgIQDgRgHAiAOFEAMKJAIQTAQgnAhBOBCDcwwi02hCYWX/3NAJAHhGAaFX/1rUJp6/BzWIAAAAASUVORK5CYII=" InformativeScreenshot="d1ad02aed39c783cd755f5bf13784483.png" IsResponsive="True" Reference="654IPjEEEkytN_BhpaXexA/IH96zU2na0C7Vg3vh2kDkQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='VitalDx' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                                                             <uix:TargetAnchorable.Anchors>
@@ -5310,12 +5310,34 @@
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                       </uix:NTypeInto>
-                                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '12455'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_37" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="49b5cce4-e299-4c6c-af87-356e10714e1a" Version="V3">
+                                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,347" sap2010:WorkflowViewState.IdRef="CommentOut_41">
+                                                        <ui:CommentOut.Body>
+                                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_286">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click '12455'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_37" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="49b5cce4-e299-4c6c-af87-356e10714e1a" Version="V3">
+                                                              <uix:NClick.Target>
+                                                                <uix:TargetAnchorable BrowserURL="https://sagisbeta.vitalaxis.com/VAAccession.aspx?type=accession&amp;action=add&amp;currentListPageDetails=%7Cstatus%7C%7Casc%7CBarcode%7Ccases%7C%7C%7C%7C%7C%7C%7C%7C%7Cfalse%7C%7Cfalse%7C%7C%7C%7C111%7C%7C%7Ctrue%7C0%7C%7C%7C%7C%7C%7C%7C" CvElementArea="2286, 1018, 470, 23" CvType="InputBox" DesignTimeRectangle="2285, 1020, 466, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl id='ui-id-118' tag='A' /&gt;" FuzzyAccuracy="0.7" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tag='IFRAME' /&gt;&lt;webctrl id='ui-id-118' tag='A' type='' class='ui-corner-all ui-state-focus' aaname='{0}' check:innerText='{0}' /&gt;&quot;, SecondaryZipCode)]" Guid="c0519f13-dd79-4fe8-bd01-29f85c7f9d35" InformativeScreenshot="99e62479f25161329368d535817b4954.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='VitalDx' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                                  <uix:TargetAnchorable.Anchors>
+                                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                      <uix:Target CvElementArea="2282, 998, 470, 21" CvType="InputBox" DesignTimeRectangle="2284, 1000, 451, 19" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl idx='2' parentid='VtabContentMain' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='SubscribeInfo_txtZip2' tableRow='5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='VtabContentMain' tag='TABLE' /&gt;&lt;webctrl id='SubscribeInfo_txtZip2' type='text' tag='INPUT' class='highlight ui-autocomplete-input' aaname='' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                                                    </scg:List>
+                                                                  </uix:TargetAnchorable.Anchors>
+                                                                </uix:TargetAnchorable>
+                                                              </uix:NClick.Target>
+                                                            </uix:NClick>
+                                                          </Sequence>
+                                                        </ui:CommentOut.Body>
+                                                      </ui:CommentOut>
+                                                      <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click '12455'" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="NClick_40" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="49b5cce4-e299-4c6c-af87-356e10714e1a" Version="V3">
                                                         <uix:NClick.Target>
-                                                          <uix:TargetAnchorable BrowserURL="https://sagisbeta.vitalaxis.com/VAAccession.aspx?type=accession&amp;action=add&amp;currentListPageDetails=%7Cstatus%7C%7Casc%7CBarcode%7Ccases%7C%7C%7C%7C%7C%7C%7C%7C%7Cfalse%7C%7Cfalse%7C%7C%7C%7C111%7C%7C%7Ctrue%7C0%7C%7C%7C%7C%7C%7C%7C" CvElementArea="2286, 1018, 470, 23" CvType="InputBox" DesignTimeRectangle="2285, 1020, 466, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl id='ui-id-118' tag='A' /&gt;" FuzzyAccuracy="0.7" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tag='IFRAME' /&gt;&lt;webctrl id='ui-id-118' tag='A' type='' class='ui-corner-all ui-state-focus' aaname='{0}' check:innerText='{0}' /&gt;&quot;, SecondaryZipCode)]" Guid="c0519f13-dd79-4fe8-bd01-29f85c7f9d35" InformativeScreenshot="99e62479f25161329368d535817b4954.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='VitalDx' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                          <uix:TargetAnchorable BrowserURL="https://sagis.vitalaxis.com/VAAccession.aspx?type=accession&amp;action=edit&amp;caseid=6804366" CvElementArea="2284, 1224, 472, 22" CvType="InputBox" DesignTimeRectangle="415, 369, 18, 17" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl id='ui-id-122' tag='A' /&gt;" FuzzyAccuracy="0.7" FuzzyMatches="10000" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tag='IFRAME' /&gt;&lt;webctrl id='ui-id-122' tag='A' type='' class='ui-corner-all ui-state-focus' aaname='{0}' check:innerText='{0}' /&gt;&quot;, SecondaryZipCode)]" Guid="67b40631-0d94-487b-a161-e9b3ce2ed18f" InformativeScreenshot="d98bac88e7473b1c5ca7ab540c1e7d99.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='VitalDx' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                                                             <uix:TargetAnchorable.Anchors>
                                                               <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                                <uix:Target CvElementArea="2282, 998, 470, 21" CvType="InputBox" DesignTimeRectangle="2284, 1000, 451, 19" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl idx='2' parentid='VtabContentMain' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='SubscribeInfo_txtZip2' tableRow='5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='VtabContentMain' tag='TABLE' /&gt;&lt;webctrl id='SubscribeInfo_txtZip2' type='text' tag='INPUT' class='highlight ui-autocomplete-input' aaname='' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                                                <uix:Target CvElementArea="2285, 1203, 470, 21" CvType="InputBox" DesignTimeRectangle="416, 334, 16, 16" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl parentid='VtabInsuranceContent2' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='span-SubscribeInfo_txtZip2' tableRow='5' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='VtabInsuranceContent2' tag='TABLE' /&gt;&lt;webctrl id='span-SubscribeInfo_txtZip2' type='' tag='SPAN' class='AutocompleteDownarrow insurance spaninc' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAAZCAYAAADaILXQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHSSURBVEhL7ZTNTttAFIXnEbLMo4D5UwtEogEUVEGlSpQfiQ0FivhvVViy6RLbC9gXXoO3iEwkFErTYkcpJibEsp3DvUNMKXGBOo266ZE+zdi6c86dsTzi+FsJTP77D3y1bFjnDsoVF67nI6jV0IxEfUQQ1FC0L2GcWjg1z2WA5weoNREgEokEkskk2mfVpuhd2sWng8O67Y2kORO1IA53A+SxWJYVWRgH3kGo2zOPKoxLqP/mvxDq35kf0Q/1mPhnu78u1IPm/ct7Dwaw8Zvtg4Z1oW7NlbdqJKmV6AA2niDju7XtszuS8MoQPGEUSvwdvAPjiynrmIvLquy4obYewuI6EQQBXVpBY+E9UhxwcgbbuaKO9yNrQvOwCeF5HphOehmbuRs65FyTzTKiWq2C6ZlXm0CTYzcFdBHcrO/7EOVyGUz/ovbH9L1T0Vcfe4nnxLMFVTbrui6EaZowDAODy9qTGVr5CT+niRdLGgaI1KIKx3FQqVQgFEUBM7ahPZlX73UJz0fXiQ0dL9c0jBDDqzpKpRJs24ZIp9PIZDKY3tJjMUVMbuoY/6jj9Qcat3ZRKBRQLBYhfPqqrYADRNvMZ/xt2Dyfz7fOPJfLtc48m83iGhjQL4mqz/9IAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
                                                               </scg:List>
                                                             </uix:TargetAnchorable.Anchors>
                                                           </uix:TargetAnchorable>
