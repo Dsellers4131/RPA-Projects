@@ -9,11 +9,12 @@
     <x:Property Name="in_str_ExceptionDetails" Type="InArgument(x:String)" />
     <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property Name="io_ExtractionResults" Type="InOutArgument(p:ExtractionResult)" />
+    <x:Property Name="in_strPatientsName" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2754,2423</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2750,2423</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_70_Export_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
@@ -231,13 +232,30 @@
     </If>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="BusinessWorkflows\AddToQueue.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="604,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="BusinessWorkflows\AddToQueue.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_Config">[in_Config]</InArgument>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_SimpleFields">[exportDataSet.Tables(0)]</InArgument>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_RequsitionTable">[exportDataSet.Tables(2)]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_ExtractionStatus">[in_str_ExtractionStatus]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_ExceptionDetails">[in_str_ExceptionDetails]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_ActionCenterAttempts">[in_int_ActionCenterAttempts.ToString]</InArgument>
-        <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_Config">
+          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="in_Config" />
+        </InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_SimpleFields">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="exportDataSet.Tables(0)" />
+        </InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_RequsitionTable">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="exportDataSet.Tables(2)" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_ExtractionStatus">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_ExtractionStatus" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_ExceptionDetails">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_ExceptionDetails" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_ActionCenterAttempts">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_int_ActionCenterAttempts.ToString" />
+        </InArgument>
+        <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">
+          <VisualBasicValue x:TypeArguments="ui:QueueItem" ExpressionText="in_TransactionItem" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strPatientName">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_strPatientsName" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

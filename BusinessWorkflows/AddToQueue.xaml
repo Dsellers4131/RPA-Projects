@@ -7,11 +7,12 @@
     <x:Property Name="in_str_ExceptionDetails" Type="InArgument(x:String)" />
     <x:Property Name="in_str_ActionCenterAttempts" Type="InArgument(x:String)" />
     <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
+    <x:Property Name="in_strPatientName" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2754,1264</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2750,1356</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AddToQueue_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -96,9 +97,11 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddToQueue" sap:VirtualizedContainerService.HintSize="496,1199" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddToQueue" sap:VirtualizedContainerService.HintSize="496,1291" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -113,15 +116,33 @@
         <InArgument x:TypeArguments="x:String">SUCCESS</InArgument>
       </Assign.Value>
     </Assign>
-    <If Condition="[in_str_ExtractionStatus.ToUpper=&quot;SUCCESS&quot;]" DisplayName="If - Success" sap:VirtualizedContainerService.HintSize="434,785" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[in_str_ExtractionStatus.ToUpper=&quot;SUCCESS&quot;]" DisplayName="If - Success" sap:VirtualizedContainerService.HintSize="434,877" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,282" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,374" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item - Success" FolderPath="[in_Config(&quot;DocumentUnderstandingQueuePath&quot;)]" sap:VirtualizedContainerService.HintSize="334,194" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_Config(&quot;Output_QueueName&quot;)]" Reference="[Environment.MachineName]">
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,196" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,85" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[In_strPatientName]" />
+              </Sequence>
+            </ui:CommentOut.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:CommentOut>
+          <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item - Success" FolderPath="[in_Config(&quot;DocumentUnderstandingQueuePath&quot;)]" sap:VirtualizedContainerService.HintSize="334,194" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_Config(&quot;Output_QueueName&quot;)]" Reference="[in_strPatientName]">
             <ui:AddQueueItem.ItemInformation>
               <InArgument x:TypeArguments="x:String" x:Key="CollectionDate">[in_dt_SimpleFields.Rows(0)("CollectionDate").ToString]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="RequisitionNumber">[in_dt_SimpleFields.Rows(0)("RequisitionNumber").ToString]</InArgument>

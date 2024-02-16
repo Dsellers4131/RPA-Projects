@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2750,13299</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2750,13266</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VitaldxEnterSiteLocationInformation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -142,7 +142,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="VitaldxEnterSiteLocationInformation" sap:VirtualizedContainerService.HintSize="1692,13234" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="VitaldxEnterSiteLocationInformation" sap:VirtualizedContainerService.HintSize="1692,13201" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_RequisitionDetails" />
       <Variable x:TypeArguments="x:Int32" Default="1" Name="intSiteLocation" />
@@ -205,7 +205,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <Sequence DisplayName="Seq - Enter Site Location details" sap:VirtualizedContainerService.HintSize="1630,10608" sap2010:WorkflowViewState.IdRef="Sequence_37">
+    <Sequence DisplayName="Seq - Enter Site Location details" sap:VirtualizedContainerService.HintSize="1630,10575" sap2010:WorkflowViewState.IdRef="Sequence_37">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="strDisplayName" />
         <Variable x:TypeArguments="x:String" Name="strNotesSite" />
@@ -230,31 +230,31 @@
           <InArgument x:TypeArguments="x:Int32">1</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_RequisitionDetails]" DisplayName="For Each Row in Data Table - Requisition Details" sap:VirtualizedContainerService.HintSize="1568,10074" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_RequisitionDetails]" DisplayName="For Each Row in Data Table - Requisition Details" sap:VirtualizedContainerService.HintSize="1568,10041" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1534,9888" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1534,9855" sap2010:WorkflowViewState.IdRef="Sequence_15">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="VitalDX" sap:VirtualizedContainerService.HintSize="1492,9678" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="8fe4723f-bffb-40b0-9ae6-8b1b1f717e8a" Version="V2">
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="VitalDX" sap:VirtualizedContainerService.HintSize="1492,9645" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="8fe4723f-bffb-40b0-9ae6-8b1b1f717e8a" Version="V2">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1458,9461" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1458,9428" sap2010:WorkflowViewState.IdRef="Sequence_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Seq - Site Location" sap:VirtualizedContainerService.HintSize="1396,9346" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <Sequence DisplayName="Seq - Site Location" sap:VirtualizedContainerService.HintSize="1396,9313" sap2010:WorkflowViewState.IdRef="Sequence_13">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -283,7 +283,7 @@
                             </scg:List>
                           </ui:MultipleAssign.AssignOperations>
                         </ui:MultipleAssign>
-                        <Sequence sap2010:Annotation.AnnotationText="Check and enter site location" DisplayName="Seq - Check and enter site location" sap:VirtualizedContainerService.HintSize="1334,9044" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                        <Sequence sap2010:Annotation.AnnotationText="Check and enter site location" DisplayName="Seq - Check and enter site location" sap:VirtualizedContainerService.HintSize="1334,9011" sap2010:WorkflowViewState.IdRef="Sequence_23">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="s:String[]" Default="[{&quot;RIGHT&quot;, &quot;LEFT&quot;,&quot;BILATERAL&quot;}]" Name="LocationMethods" />
                             <Variable x:TypeArguments="x:Boolean" Name="boolMatch" />
@@ -421,9 +421,9 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:LogMessage>
-                          <If Condition="[CurrentRow(&quot;Location&quot;).Tostring.contains(&quot;Electronically&quot;)]" DisplayName="If CurrentRow(&quot;Location&quot;).Tostring" sap:VirtualizedContainerService.HintSize="1272,7172" sap2010:WorkflowViewState.IdRef="If_25">
+                          <If Condition="[CurrentRow(&quot;Location&quot;).Tostring.contains(&quot;Electronically&quot;)]" DisplayName="If CurrentRow(&quot;Location&quot;).Tostring" sap:VirtualizedContainerService.HintSize="1272,7139" sap2010:WorkflowViewState.IdRef="If_25">
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="476,295" sap2010:WorkflowViewState.IdRef="Sequence_135">
+                              <Sequence sap:VirtualizedContainerService.HintSize="476,262" sap2010:WorkflowViewState.IdRef="Sequence_135">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -437,7 +437,24 @@
                                     <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,85" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;BOT MAY HAVE READ REQ INCORRECTLY .IF NEEDED MANUALLY ENTER MISSING SITE LOCATION PAGE DETAILS&quot; +Environment.newline+Environment.newline+ &quot;COMPARE AGAINST REQ SHEET&quot;+Environment.newline+Environment.newline+&quot;ONCE DETAILS ARE VALIDATED CLICK OK&quot;]" />
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,196" sap2010:WorkflowViewState.IdRef="Sequence_138">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,85" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;BOT MAY HAVE READ REQ INCORRECTLY .IF NEEDED MANUALLY ENTER MISSING SITE LOCATION PAGE DETAILS&quot; +Environment.newline+Environment.newline+ &quot;COMPARE AGAINST REQ SHEET&quot;+Environment.newline+Environment.newline+&quot;ONCE DETAILS ARE VALIDATED CLICK OK&quot;]" />
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:CommentOut>
                               </Sequence>
                             </If.Then>
                             <If.Else>
