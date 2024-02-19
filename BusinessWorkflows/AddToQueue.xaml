@@ -8,6 +8,7 @@
     <x:Property Name="in_str_ActionCenterAttempts" Type="InArgument(x:String)" />
     <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property Name="in_strPatientName" Type="InArgument(x:String)" />
+    <x:Property Name="InputDialogueName" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -142,7 +143,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:CommentOut>
-          <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item - Success" FolderPath="[in_Config(&quot;DocumentUnderstandingQueuePath&quot;)]" sap:VirtualizedContainerService.HintSize="334,194" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_Config(&quot;Output_QueueName&quot;)]" Reference="[in_strPatientName]">
+          <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item - Success" FolderPath="[in_Config(&quot;DocumentUnderstandingQueuePath&quot;)]" sap:VirtualizedContainerService.HintSize="334,194" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_Config(&quot;Output_QueueName&quot;)]" Reference="[InputDialogueName]">
             <ui:AddQueueItem.ItemInformation>
               <InArgument x:TypeArguments="x:String" x:Key="CollectionDate">[in_dt_SimpleFields.Rows(0)("CollectionDate").ToString]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="RequisitionNumber">[in_dt_SimpleFields.Rows(0)("RequisitionNumber").ToString]</InArgument>
