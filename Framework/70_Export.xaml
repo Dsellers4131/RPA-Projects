@@ -10,6 +10,7 @@
     <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property Name="io_ExtractionResults" Type="InOutArgument(p:ExtractionResult)" />
     <x:Property Name="in_strPatientsName" Type="InArgument(x:String)" />
+    <x:Property Name="InputDialogueName" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -255,6 +256,9 @@
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_strPatientName">
           <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_strPatientsName" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="InputDialogueName">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InputDialogueName" />
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
