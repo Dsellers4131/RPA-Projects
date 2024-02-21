@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>3596,30158</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>3596,30134</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VitaldxEnterAccessionDetails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -149,7 +149,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="VitaldxEnterAccessionDetails" sap:VirtualizedContainerService.HintSize="3606,30093" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="VitaldxEnterAccessionDetails" sap:VirtualizedContainerService.HintSize="3606,30069" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="njl:JObject" Name="ConfigJObject" />
       <Variable x:TypeArguments="sd2:DataTable" Name="dt_RequisitionDetails" />
@@ -199,13 +199,13 @@
         <InArgument x:TypeArguments="x:String">[ConfigJObject.Item("SagisPortalURL").ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="VitalDX" sap:VirtualizedContainerService.HintSize="3544,29559" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="49b5cce4-e299-4c6c-af87-356e10714e1a" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="VitalDX" sap:VirtualizedContainerService.HintSize="3544,29535" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="49b5cce4-e299-4c6c-af87-356e10714e1a" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="3510,29342" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="3510,29318" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="outSelection" />
               <Variable x:TypeArguments="x:Boolean" Name="boolIndicator" />
@@ -872,7 +872,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:ExcelApplicationScope>
               </Parallel>
-              <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="* Type into Collection Date" ClickBeforeMode="Single" DisplayName="Type Into - Collection Date" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1206,249" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="49b5cce4-e299-4c6c-af87-356e10714e1a" Text="[(convert.ToDateTime(in_TransactionItem.SpecificContent(&quot;CollectionDate&quot;))).ToString(&quot;MM/dd/yyyy&quot;)]" Timeout="1" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="* Type into Collection Date" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into - Collection Date" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1206,249" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="49b5cce4-e299-4c6c-af87-356e10714e1a" Text="[(convert.ToDateTime(in_TransactionItem.SpecificContent(&quot;CollectionDate&quot;))).ToString(&quot;MM/dd/yyyy&quot;)]" Timeout="1" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable BrowserURL="https://sagis.vitalaxis.com/VAAccession.aspx?type=accession&amp;action=add&amp;currentListPageDetails=%7Cstatus%7C%7Casc%7CBarcode%7Ccases%7C%7C%7C%7C%7C%7C%7C%7C%7Cfalse%7C%7Cfalse%7C%7C%7C%7C1729%7C%7C%7Ctrue%7C0%7C%7C%7C%7C%7C%7C%7C" ContentHash="RAlqRZCLE0aaXgO0ke7qDA" CvElementArea="208, 332, 105, 21" CvType="InputBox" DesignTimeRectangle="209, 333, 102, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl id='Table3' tableRow='5' tag='TABLE' /&gt;&lt;webctrl id='txtCollectionDate' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl id='workAreaFrame' tag='IFRAME' /&gt;&lt;webctrl id='Table3' tag='TABLE' /&gt;&lt;webctrl id='txtCollectionDate' type='text' tag='INPUT' class='formStyle highlight Isdatachangefortc getCurrentDate appMandatory hasDatepicker CaseDataChange' aaname='' /&gt;" Guid="50707e5a-c46b-4283-893c-2ea99c6c105c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAXCAYAAADjndqIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKJSURBVGhD7Za9a9tAGIf1Z2gtZMnWbvaaLdoi8FBDhqCpePQURBYjOhTTwZgMwVMhHgrOEHAGg7IEnKFG3rQE1CGDBg8ePNzg4df3pJMsy3ap1A987j1woNOd716/j+5Dg0IKlChJSEVNJhNV9rAkrIlS7BdKlCQoUZKgREmCEiUJPxUV3DdhHGnQ9GPUOx5Y9BZg0y6syhtomo7j9114C9GQMG3DvPbj55mPYacB49M4rics5/AfumictpFriZjfWWg88BkZvI6F6pY4Sse3cNHUNTjPoi4Bu0XNBrDe2nDn9GIZoFd7h/aUt47h6CZ63/kz4F8b0FvZVDO4l9T+wp+pr0aJ5GWtD7W0xHvN2SKK5jujuXnmnx3otR6CJT0vfXRP9TjBvxHf+MpAtXIooihB2tXqD4Z9E+aXgP5nCO9bmH69Ub8PQ/B8RTAX9vktQlGN4H1yomK4yC2iXnowRX/26sF7TWeLBDfuabaS8bEnGwaNPaRxDkdUJrk8EZvJ5l9nFc3RKpFs1IR1l2qLKSgquDHF6sixGMOuNOHyraxMfMyDU3PgUZUL/09EMfg3dZzQu5WmOQYXFgYzUU0oJMpDm84tT9RSFj565yeUXDFb4fjorPu4+gAOS9S2rUUQ9OMkrK0dfm5kt8GEIqLoImJ8zmsKcMslPWVGLhpfOEA9OS8zxeyvbdJ7y25RG4e1OMSJ4KsF49LdEBJScuzH1fpKKSBq3EouIgkBrVID9ig3W4n4shzOiiK2X395cvNfJk925qaW51dF8YvIGd3wRDWC/zY/nxirWHzrHJSoQmRuamVhjzbqkmxF/5o/J0rxV1GiJEGJkoSdolTZv5KQilLsN0qUFAA/ALzfDpM22o+fAAAAAElFTkSuQmCC" InformativeScreenshot="927b6028e52d5c083cfb77743189affc.png" Reference="654IPjEEEkytN_BhpaXexA/krOn_l9k90ytlC2Kzatf0g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='VitalDx' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V3" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
@@ -2083,7 +2083,7 @@
                 </TryCatch>
               </Sequence>
             </Sequence>
-            <Sequence DisplayName="Patient Information" sap:VirtualizedContainerService.HintSize="3448,4195" sap2010:WorkflowViewState.IdRef="Sequence_171">
+            <Sequence DisplayName="Patient Information" sap:VirtualizedContainerService.HintSize="3448,4171" sap2010:WorkflowViewState.IdRef="Sequence_171">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Int32" Name="intCount" />
               </Sequence.Variables>
@@ -2546,35 +2546,6 @@
                   </scg:List>
                 </ui:MultipleAssign.AssignOperations>
               </ui:MultipleAssign>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="3386,273" sap2010:WorkflowViewState.IdRef="CommentOut_25">
-                <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,194" sap2010:WorkflowViewState.IdRef="Sequence_255">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="* Enter City" ClickBeforeMode="None" DisplayName="Type Into 'City'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,83" sap2010:WorkflowViewState.IdRef="NTypeInto_64" InteractionMode="HardwareEvents" ScopeIdentifier="49b5cce4-e299-4c6c-af87-356e10714e1a" Text="[in_TransactionItem.SpecificContent(&quot;City&quot;).ToString  + &quot;[k(Enter)]&quot;]" Version="V1">
-                      <uix:NTypeInto.Target>
-                        <uix:TargetAnchorable BrowserURL="https://sagis.vitalaxis.com/VAAccession.aspx?type=accession&amp;action=add&amp;currentListPageDetails=%7Cstatus%7Ccollectiondate%7Cdesc%7CBarcode%7Ccases%7C%7C%7C%7C%7C%7C%7C%7C%7Cfalse%7C%7Cfalse%7C%7C%7C%7C741%7C%7C%7Ctrue%7C0%7C%7C%7C%7C%7C%7C" ContentHash="2SBxepNS80OwjQLt0bHs-g" DesignTimeRectangle="1151, 337, 132, 19" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='IFRAME' /&gt;&lt;webctrl parentid='tblPatientInfo' tableCol='32' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl parentid='tblPatientInfo' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='formStyle highlight ui-autocomplete-input' aaname='' /&gt;" Guid="3852ee75-9feb-45ca-a714-93bbf1fc921c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIgAAAAXCAYAAADQigfEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABjSURBVGhD7dJBDcMwAMDAshqo8hmqcErVSstnqRHcSWbgY0IwCFuf8/u0BhljSKvtIHAzCMkgJIOQDEIyCMkgJIOQDEIyCMkgJIOQDEIyCMkgJIOQDEJ6HUT69TcI7BiEMOcFF4a5APnXpTsAAAAASUVORK5CYII=" InformativeScreenshot="f1048310da1b6001ee15539325061618.png" IsResponsive="True" Reference="654IPjEEEkytN_BhpaXexA/R_QbPjfZAkeox9Q3t5d1DA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='VitalDx' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
-                          <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                              <uix:Target DesignTimeRectangle="996, 335, 149, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='IFRAME' /&gt;&lt;webctrl parentid='tblPatientInfo' tableCol='32' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl parentid='tblPatientInfo' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='fontBlackBold' aaname='                                                         City :                                                     ' check:innerText='City :' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJkAAAAaCAYAAACkeP7MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJQSURBVGhD7dghiNtgGMbxyImKihMRZwondrIwcYWZBSZWOFNZOFWmjlNl4qgbZWKUqXJilIqDnBhkYpCKQWcGqUvFIBWFVJyIqIg48YmKZ1+atDRtchvHfaZ9flCRBKr+vN+baCBSjJGRcoyMlGNkpBwjI+UYGSmXHZkIEcx8BA/JdULMhrC+2fDC5AbRf9iKTMAftFE70qBp0a+I6rW5jioYNFE+acCciuW1mDkyuiGjo0elIhOTHuq6BkOG5YxdON9lcMc66n1P5rcrjq6+jo4oy0ZkAl6/juLLS9j3q1s+rPcllD/YCBbpSRaO2qgsp130M9Adh/Bu69CPk+gWIZxPBrSzFoZB8n9r8tlnA/p5F+7WkUz7JxWZ+6UK/V0Hbs7xlzouH3w4XxsoHVXRGXjL/U3MLDRO5OS7lZNv7qD95gUqHx2EMtA0gWBkwfzhZjyjffP0yNbXG8flIoB9dQr9ogdH7naGbqAz4sJ26LaOyxr0V/J4mye3oiPvpolWP544/4xMWt4rlFF9W0LxPD9YOhzpxX/clYv+KS7v4kVfzGw0z0rx8SevdyL72Yojm2yUFB2Tr+NdrXaT/cIQEYEPbxrkPqf9kYosmma7nzCs/E8YUxMN+TaqaVW5+K9yiZd6rVBD709eQlz8D8lWZImcj7EIA3gTH+FGO+I+mUirBT7ay64rKF2Y8B8ZU5xkhyM7sqeau+hdyQlVMND+tfPdgg7UM0fmwb4zYf32OaFo7XkjI8rAyEg5RkbKMTJSjpGRcoyMlGNkpBwjI8WAvy2NKoxZGcFmAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
-                            </scg:List>
-                          </uix:TargetAnchorable.Anchors>
-                        </uix:TargetAnchorable>
-                      </uix:NTypeInto.Target>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </uix:NTypeInto>
-                  </Sequence>
-                </ui:CommentOut.Body>
-              </ui:CommentOut>
               <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="3386,160" sap2010:WorkflowViewState.IdRef="CommentOut_22">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_251">
@@ -2843,6 +2814,24 @@
                   </Sequence>
                 </If.Else>
               </If>
+              <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="* Enter City" ClickBeforeMode="None" DisplayName="Type Into 'City'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="3386,249" sap2010:WorkflowViewState.IdRef="NTypeInto_105" InteractionMode="HardwareEvents" ScopeIdentifier="49b5cce4-e299-4c6c-af87-356e10714e1a" Text="[in_TransactionItem.SpecificContent(&quot;City&quot;).ToString  + &quot;[k(Enter)]&quot;]" Version="V1">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sagis.vitalaxis.com/VAAccession.aspx?type=accession&amp;action=add&amp;currentListPageDetails=%7Cstatus%7Ccollectiondate%7Cdesc%7CBarcode%7Ccases%7C%7C%7C%7C%7C%7C%7C%7C%7Cfalse%7C%7Cfalse%7C%7C%7C%7C741%7C%7C%7Ctrue%7C0%7C%7C%7C%7C%7C%7C" ContentHash="2SBxepNS80OwjQLt0bHs-g" DesignTimeRectangle="1151, 337, 132, 19" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='IFRAME' /&gt;&lt;webctrl parentid='tblPatientInfo' tableCol='32' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl parentid='tblPatientInfo' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='formStyle highlight ui-autocomplete-input' aaname='' /&gt;" Guid="3852ee75-9feb-45ca-a714-93bbf1fc921c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIgAAAAXCAYAAADQigfEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABjSURBVGhD7dJBDcMwAMDAshqo8hmqcErVSstnqRHcSWbgY0IwCFuf8/u0BhljSKvtIHAzCMkgJIOQDEIyCMkgJIOQDEIyCMkgJIOQDEIyCMkgJIOQDEJ6HUT69TcI7BiEMOcFF4a5APnXpTsAAAAASUVORK5CYII=" InformativeScreenshot="f1048310da1b6001ee15539325061618.png" IsResponsive="True" Reference="654IPjEEEkytN_BhpaXexA/R_QbPjfZAkeox9Q3t5d1DA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='VitalDx' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="996, 335, 149, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='IFRAME' /&gt;&lt;webctrl parentid='tblPatientInfo' tableCol='32' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='topFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='workAreaFrameDiv' tag='TABLE' /&gt;&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl parentid='tblPatientInfo' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='fontBlackBold' aaname='                                                         City :                                                     ' check:innerText='City :' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJkAAAAaCAYAAACkeP7MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJQSURBVGhD7dghiNtgGMbxyImKihMRZwondrIwcYWZBSZWOFNZOFWmjlNl4qgbZWKUqXJilIqDnBhkYpCKQWcGqUvFIBWFVJyIqIg48YmKZ1+atDRtchvHfaZ9flCRBKr+vN+baCBSjJGRcoyMlGNkpBwjI+UYGSmXHZkIEcx8BA/JdULMhrC+2fDC5AbRf9iKTMAftFE70qBp0a+I6rW5jioYNFE+acCciuW1mDkyuiGjo0elIhOTHuq6BkOG5YxdON9lcMc66n1P5rcrjq6+jo4oy0ZkAl6/juLLS9j3q1s+rPcllD/YCBbpSRaO2qgsp130M9Adh/Bu69CPk+gWIZxPBrSzFoZB8n9r8tlnA/p5F+7WkUz7JxWZ+6UK/V0Hbs7xlzouH3w4XxsoHVXRGXjL/U3MLDRO5OS7lZNv7qD95gUqHx2EMtA0gWBkwfzhZjyjffP0yNbXG8flIoB9dQr9ogdH7naGbqAz4sJ26LaOyxr0V/J4mye3oiPvpolWP544/4xMWt4rlFF9W0LxPD9YOhzpxX/clYv+KS7v4kVfzGw0z0rx8SevdyL72Yojm2yUFB2Tr+NdrXaT/cIQEYEPbxrkPqf9kYosmma7nzCs/E8YUxMN+TaqaVW5+K9yiZd6rVBD709eQlz8D8lWZImcj7EIA3gTH+FGO+I+mUirBT7ay64rKF2Y8B8ZU5xkhyM7sqeau+hdyQlVMND+tfPdgg7UM0fmwb4zYf32OaFo7XkjI8rAyEg5RkbKMTJSjpGRcoyMlGNkpBwjI8WAvy2NKoxZGcFmAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
               <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="3386,52" sap2010:WorkflowViewState.IdRef="CommentOut_31">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,360" sap2010:WorkflowViewState.IdRef="Sequence_267">
