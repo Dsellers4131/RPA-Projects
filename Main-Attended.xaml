@@ -184,7 +184,11 @@
         <Variable x:TypeArguments="ui:BusinessRuleException" Name="BusinessRuleException" />
         <Variable x:TypeArguments="x:String" Default="https://sagis.vitalaxis.com" Name="strBaseURL" />
         <Variable x:TypeArguments="njl:JObject" Name="ConfigJObject" />
-        <Variable x:TypeArguments="x:String" Default="[&quot;S:\SagisDX\All\RPA Accessioning\Scan Test Kodak\&quot; +system.datetime.now.tostring(&quot;MMM&quot;) +&quot; &quot;+ system.datetime.now.ToString(&quot;yyyy&quot;)+&quot;\&quot;+ system.datetime.now.ToString(&quot;M.d.yy&quot;)]" Name="ForEachFolderPath" />
+        <Variable x:TypeArguments="x:String" Name="ForEachFolderPath">
+          <Variable.Default>
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;S:\SagisDX\All\RPA Accessioning\Bot Derm Reqs\&quot; +system.datetime.now.tostring(&quot;MMM&quot;) +&quot; &quot;+ system.datetime.now.ToString(&quot;yyyy&quot;)+&quot;\&quot;+ system.datetime.now.ToString(&quot;M.d.yy&quot;)" />
+          </Variable.Default>
+        </Variable>
         <Variable x:TypeArguments="x:String" Name="formJSON" />
         <Variable x:TypeArguments="x:Int32" Name="IntPdfFileCount" />
         <Variable x:TypeArguments="x:String" Name="strAddAnother" />
@@ -221,7 +225,7 @@
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Parallel sap2010:Annotation.AnnotationText="* Get and Initalise Config values from orchestrator asset&#xA;* Open Form and get Entries" DisplayName="Initalise Config and Open Form" sap:VirtualizedContainerService.HintSize="1740,4637" sap2010:WorkflowViewState.IdRef="Parallel_2">
+          <Parallel sap2010:Annotation.AnnotationText="* Get and Initalise Config values from orchestrator asset&#xA;* Open Form and get Entries" DisplayName="Initalise Config and Open Form" sap:VirtualizedContainerService.HintSize="1550,4636" sap2010:WorkflowViewState.IdRef="Parallel_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -229,7 +233,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[dis_config is Nothing]" DisplayName="Seq - Initalise " sap:VirtualizedContainerService.HintSize="526,4548" sap2010:WorkflowViewState.IdRef="If_31">
+            <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[dis_config is Nothing]" DisplayName="Seq - Initalise " sap:VirtualizedContainerService.HintSize="526,4547" sap2010:WorkflowViewState.IdRef="If_31">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -393,7 +397,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <Sequence sap2010:Annotation.AnnotationText="* Get Details under form" DisplayName="Form Entry" sap:VirtualizedContainerService.HintSize="850,4548" sap2010:WorkflowViewState.IdRef="Sequence_313">
+            <Sequence sap2010:Annotation.AnnotationText="* Get Details under form" DisplayName="Form Entry" sap:VirtualizedContainerService.HintSize="850,4547" sap2010:WorkflowViewState.IdRef="Sequence_313">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -730,7 +734,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEachFileX>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="788,53" sap2010:WorkflowViewState.IdRef="CommentOut_52">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="788,52" sap2010:WorkflowViewState.IdRef="CommentOut_52">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_341">
                     <sap:WorkflowViewStateService.ViewState>
@@ -972,7 +976,7 @@
               </ui:CommentOut>
             </Sequence>
           </Parallel>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1740,143" sap2010:WorkflowViewState.IdRef="LogMessage_166" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;CHECK QUEUES&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1550,141" sap2010:WorkflowViewState.IdRef="LogMessage_166" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;CHECK QUEUES&quot;]" />
         </Sequence>
         <FlowStep.Next>
           <FlowDecision x:Name="__ReferenceID45" Condition="[EnqeueData.Rows.Count=0]" DisplayName="Extract Details from Form" sap:VirtualizedContainerService.HintSize="140,87" sap2010:WorkflowViewState.IdRef="FlowDecision_31">
@@ -1026,13 +1030,13 @@
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Parallel sap2010:Annotation.AnnotationText="* Vital Dx Login&#xA;* Read DU form details" DisplayName="VitalDx Login and Read DU form" sap:VirtualizedContainerService.HintSize="1358,2232" sap2010:WorkflowViewState.IdRef="Parallel_1">
+                  <Parallel sap2010:Annotation.AnnotationText="* Vital Dx Login&#xA;* Read DU form details" DisplayName="VitalDx Login and Read DU form" sap:VirtualizedContainerService.HintSize="1358,2413" sap2010:WorkflowViewState.IdRef="Parallel_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence sap2010:Annotation.AnnotationText="* Vital DX login" DisplayName="Seq - Vital DX Login Part" sap:VirtualizedContainerService.HintSize="450,2143" sap2010:WorkflowViewState.IdRef="Sequence_296">
+                    <Sequence sap2010:Annotation.AnnotationText="* Vital DX login" DisplayName="Seq - Vital DX Login Part" sap:VirtualizedContainerService.HintSize="450,2324" sap2010:WorkflowViewState.IdRef="Sequence_296">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2058,7 +2062,7 @@
                         <x:Reference>__ReferenceID0</x:Reference>
                       </StateMachine>
                     </Sequence>
-                    <Sequence sap2010:Annotation.AnnotationText="* DU Form extraction" DisplayName="DU Process" sap:VirtualizedContainerService.HintSize="734,2143" sap2010:WorkflowViewState.IdRef="Sequence_255">
+                    <Sequence sap2010:Annotation.AnnotationText="* DU Form extraction" DisplayName="DU Process" sap:VirtualizedContainerService.HintSize="734,2324" sap2010:WorkflowViewState.IdRef="Sequence_255">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2066,6 +2070,7 @@
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="672,141" sap2010:WorkflowViewState.IdRef="LogMessage_174" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Timestamp Read DU Form: &quot;+ System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)]" />
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Read the config file first; all Log &amp; Exception messages are defined there" DisplayName="ReadConfigFile" sap:VirtualizedContainerService.HintSize="672,155" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_65" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\00_ReadConfigFile.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
@@ -2796,7 +2801,7 @@
                                           <av:PointCollection x:Key="ConnectorLocation">399.55555555555554,234.48888888888888 399.55555555555554,264.4888888888889 190.5,264.4888888888889 190.5,286.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Get the TransactionItem" DisplayName="GetTransactionItem" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_87" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\15_GetTransactionItem.xaml">
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Get the TransactionItem" DisplayName="GetTransactionItem" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_87" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\15_GetTransactionItem.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_Config">[config]</InArgument>
                                           <InArgument x:TypeArguments="x:Int32" x:Key="in_MaxAttempts">[maxAttempts]</InArgument>
@@ -4190,7 +4195,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                               <State.Transitions>
-                                                <Transition DisplayName="Success" sap:VirtualizedContainerService.HintSize="975,4113" sap2010:WorkflowViewState.IdRef="Transition_2">
+                                                <Transition DisplayName="Success" sap:VirtualizedContainerService.HintSize="975,4294" sap2010:WorkflowViewState.IdRef="Transition_2">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <av:PointCollection x:Key="ConnectorLocation">707,571.4 737,571.4 737,351.7 660,351.7</av:PointCollection>
@@ -4202,7 +4207,7 @@
                                                     <x:Reference>__ReferenceID23</x:Reference>
                                                   </Transition.To>
                                                   <Transition.Action>
-                                                    <Sequence sap:VirtualizedContainerService.HintSize="872,3716" sap2010:WorkflowViewState.IdRef="Sequence_362">
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="872,3897" sap2010:WorkflowViewState.IdRef="Sequence_362">
                                                       <Sequence.Variables>
                                                         <Variable x:TypeArguments="x:String" Default="[&quot;S:\SagisDX\All\RPA Accessioning\Scan Test Kodak\Feb 2024\Processed 2.12.24 TEST DO NOT TOUCH PLZ&quot; +&quot;\&quot;+TransactionItemVitalDX.SpecificContent(&quot;FirstName&quot;).ToString+&quot; &quot;+ TransactionItemVitalDX.SpecificContent(&quot;LastName&quot;).ToString]" Name="RenameFile" />
                                                         <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="QueueName" />
@@ -4216,7 +4221,8 @@
                                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="810,141" sap2010:WorkflowViewState.IdRef="LogMessage_170" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[DuQueueItemsInt.Count.ToString + &quot; This is the Du Queue Count&quot;]" />
                                                       <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="Equals" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="810,143" sap2010:WorkflowViewState.IdRef="GetQueueItems_5" QueueItemStates="Successful" QueueName="Performer" Reference="[InputDialogueName]" Result="[QueueName]" Top="1" />
                                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="810,141" sap2010:WorkflowViewState.IdRef="LogMessage_171" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;StrFilePath &quot; +strFilePath]" />
-                                                      <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;S:\SagisDX\All\RPA Accessioning\Scan Test Kodak\&quot; +system.datetime.now.tostring(&quot;MMM&quot;) +&quot; &quot;+ system.datetime.now.ToString(&quot;yyyy&quot;)+&quot;\&quot;+ &quot;Processed &quot;+system.datetime.now.ToString(&quot;M.d.yy&quot;)]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="810,159" sap2010:WorkflowViewState.IdRef="MoveFile_2" Path="[&quot;S:\SagisDX\All\RPA Accessioning\Scan Test Kodak\Feb 2024\&quot;+system.datetime.now.ToString(&quot;M.d.yy&quot;)+&quot;/&quot;+InputDialogueName+ &quot;.pdf&quot;]" />
+                                                      <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;S:\SagisDX\All\RPA Accessioning\Bot Derm Reqs\&quot; +system.datetime.now.tostring(&quot;MMM&quot;) +&quot; &quot;+ system.datetime.now.ToString(&quot;yyyy&quot;)+&quot;\&quot;+ &quot;Processed &quot;+system.datetime.now.ToString(&quot;M.d.yy&quot;)]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="810,159" sap2010:WorkflowViewState.IdRef="MoveFile_2" Path="[&quot;S:\SagisDX\All\RPA Accessioning\Bot Derm Reqs\Feb 2024\&quot;+system.datetime.now.ToString(&quot;M.d.yy&quot;)+&quot;/&quot;+InputDialogueName+ &quot;.pdf&quot;]" />
+                                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="810,141" sap2010:WorkflowViewState.IdRef="LogMessage_175" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Timestamp At Start of Next Form: &quot;+ System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)]" />
                                                       <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="810,239" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="[&quot;Please Type In The Patient To Process&quot;+ Environment.NewLine+ &quot;LastName, FirstName&quot;]" Title="What Patient Will We Be Processing First?">
                                                         <ui:InputDialog.Result>
                                                           <OutArgument x:TypeArguments="x:String">[InputDialogueName]</OutArgument>
