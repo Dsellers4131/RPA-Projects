@@ -9,11 +9,13 @@
     <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property Name="in_strPatientName" Type="InArgument(x:String)" />
     <x:Property Name="InputDialogueName" Type="InArgument(x:String)" />
+    <x:Property Name="io_FormType" Type="InOutArgument(x:String)" />
+    <x:Property Name="in_DocumentType" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2750,1356</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>3004,1235</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AddToQueue_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -102,14 +104,17 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddToQueue" sap:VirtualizedContainerService.HintSize="496,1291" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddToQueue" sap:VirtualizedContainerService.HintSize="635,1170" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="[io_FormType]" Name="FormType" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Adding to queue - Extraction status: &quot;+in_str_ExtractionStatus]" />
-    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="573,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Adding to queue - Extraction status: &quot;+in_str_ExtractionStatus]" />
+    <Assign sap:VirtualizedContainerService.HintSize="573,81" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[in_str_ExtractionStatus]</OutArgument>
       </Assign.To>
@@ -117,79 +122,108 @@
         <InArgument x:TypeArguments="x:String">SUCCESS</InArgument>
       </Assign.Value>
     </Assign>
-    <If Condition="[in_str_ExtractionStatus.ToUpper=&quot;SUCCESS&quot;]" DisplayName="If - Success" sap:VirtualizedContainerService.HintSize="434,877" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[in_str_ExtractionStatus.ToUpper=&quot;SUCCESS&quot;]" DisplayName="If - Success" sap:VirtualizedContainerService.HintSize="573,757" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,374" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap:VirtualizedContainerService.HintSize="539,575" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-            <ui:CommentOut.Body>
-              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,196" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[in_DocumentType]" sap:VirtualizedContainerService.HintSize="497,487" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+            <Switch.Default>
+              <Sequence sap:VirtualizedContainerService.HintSize="450,305" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,85" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[In_strPatientName]" />
+                <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item - Success" FolderPath="[in_Config(&quot;DocumentUnderstandingQueuePath&quot;)]" sap:VirtualizedContainerService.HintSize="388,194" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_Config(&quot;Output_QueueName&quot;)]" Reference="[InputDialogueName]">
+                  <ui:AddQueueItem.ItemInformation>
+                    <InArgument x:TypeArguments="x:String" x:Key="CollectionDate">[in_dt_SimpleFields.Rows(0)("CollectionDate").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="RequisitionNumber">[in_dt_SimpleFields.Rows(0)("RequisitionNumber").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="PMS">[in_dt_SimpleFields.Rows(0)("PMS").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="EMR">[in_dt_SimpleFields.Rows(0)("EMR").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Laboratory">[in_dt_SimpleFields.Rows(0)("Laboratory").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="LastName">[in_dt_SimpleFields.Rows(0)("LastName").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="FirstName">[in_dt_SimpleFields.Rows(0)("FirstName").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="MiddleName">[in_dt_SimpleFields.Rows(0)("MiddleName").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="DateOfBirth">[in_dt_SimpleFields.Rows(0)("DateOfBirth").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Gender">[in_dt_SimpleFields.Rows(0)("Gender").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Address">[in_dt_SimpleFields.Rows(0)("Address").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="State">[in_dt_SimpleFields.Rows(0)("State").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="City">[in_dt_SimpleFields.Rows(0)("City").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="ZipCode">[in_dt_SimpleFields.Rows(0)("ZipCode").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="HomePhone">[in_dt_SimpleFields.Rows(0)("HomePhone").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="ExtractionStatus">[in_str_ExtractionStatus]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="ExceptionDetails">[in_str_ExceptionDetails]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="ActionCenterAttempts">[in_str_ActionCenterAttempts]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="RequisitionDetails">[JsonConvert.SerializeObject(in_dt_RequsitionTable)]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Physician">[in_dt_SimpleFields.Rows(0)(17).ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Hospital">[in_dt_SimpleFields.Rows(0)(18).ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="FilePath">[in_TransactionItem.SpecificContent("FilePath").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_SubscriberName">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_SubscriberName").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_Relationship">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_Relationship").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_SubDOB">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_SubDOB").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_CompanyName">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_CompanyName").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_ContractNumber">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_ContractNumber").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_MemberID">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_MemberID").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_StreetAddress">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_StreetAddress").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_City">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_City").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_State">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_State").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_ZipCode">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_ZipCode").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="BillType">[in_dt_SimpleFields.Rows(0)("BillType").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_SubscriberName">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_SubscriberName").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_Relationship">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_Relationship").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_SubDOB">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_SubDOB").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_CompanyName">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_CompanyName").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_ContractNumber">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_ContractNumber").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_MemberID">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_MemberID").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_StreetAddress">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_StreetAddress").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_City">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_City").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_State">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_State").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_ZipCode">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_ZipCode").ToString]</InArgument>
+                  </ui:AddQueueItem.ItemInformation>
+                </ui:AddQueueItem>
               </Sequence>
-            </ui:CommentOut.Body>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:CommentOut>
-          <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item - Success" FolderPath="[in_Config(&quot;DocumentUnderstandingQueuePath&quot;)]" sap:VirtualizedContainerService.HintSize="334,194" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_Config(&quot;Output_QueueName&quot;)]" Reference="[InputDialogueName]">
-            <ui:AddQueueItem.ItemInformation>
-              <InArgument x:TypeArguments="x:String" x:Key="CollectionDate">[in_dt_SimpleFields.Rows(0)("CollectionDate").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="RequisitionNumber">[in_dt_SimpleFields.Rows(0)("RequisitionNumber").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="PMS">[in_dt_SimpleFields.Rows(0)("PMS").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="EMR">[in_dt_SimpleFields.Rows(0)("EMR").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="Laboratory">[in_dt_SimpleFields.Rows(0)("Laboratory").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="LastName">[in_dt_SimpleFields.Rows(0)("LastName").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="FirstName">[in_dt_SimpleFields.Rows(0)("FirstName").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="MiddleName">[in_dt_SimpleFields.Rows(0)("MiddleName").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="DateOfBirth">[in_dt_SimpleFields.Rows(0)("DateOfBirth").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="Gender">[in_dt_SimpleFields.Rows(0)("Gender").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="Address">[in_dt_SimpleFields.Rows(0)("Address").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="State">[in_dt_SimpleFields.Rows(0)("State").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="City">[in_dt_SimpleFields.Rows(0)("City").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="ZipCode">[in_dt_SimpleFields.Rows(0)("ZipCode").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="HomePhone">[in_dt_SimpleFields.Rows(0)("HomePhone").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="ExtractionStatus">[in_str_ExtractionStatus]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="ExceptionDetails">[in_str_ExceptionDetails]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="ActionCenterAttempts">[in_str_ActionCenterAttempts]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="RequisitionDetails">[JsonConvert.SerializeObject(in_dt_RequsitionTable)]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="Physician">[in_dt_SimpleFields.Rows(0)(17).ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="Hospital">[in_dt_SimpleFields.Rows(0)(18).ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="FilePath">[in_TransactionItem.SpecificContent("FilePath").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_SubscriberName">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_SubscriberName").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_Relationship">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_Relationship").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_SubDOB">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_SubDOB").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_CompanyName">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_CompanyName").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_ContractNumber">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_ContractNumber").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_MemberID">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_MemberID").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_StreetAddress">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_StreetAddress").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_City">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_City").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_State">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_State").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="PrimaryInsurance_ZipCode">[in_dt_SimpleFields.Rows(0)("PrimaryInsurance_ZipCode").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="BillType">[in_dt_SimpleFields.Rows(0)("BillType").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_SubscriberName">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_SubscriberName").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_Relationship">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_Relationship").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_SubDOB">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_SubDOB").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_CompanyName">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_CompanyName").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_ContractNumber">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_ContractNumber").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_MemberID">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_MemberID").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_StreetAddress">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_StreetAddress").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_City">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_City").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_State">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_State").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="SecondaryInsurance_ZipCode">[in_dt_SimpleFields.Rows(0)("SecondaryInsurance_ZipCode").ToString]</InArgument>
-            </ui:AddQueueItem.ItemInformation>
-          </ui:AddQueueItem>
+            </Switch.Default>
+            <Sequence x:Key="EzDerm" sap:VirtualizedContainerService.HintSize="450,168" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="388,194" sap2010:WorkflowViewState.IdRef="AddQueueItem_3" Priority="Normal" QueueType="Performer" Reference="[InputDialogueName]">
+                <ui:AddQueueItem.ItemInformation>
+                  <InArgument x:TypeArguments="x:String" x:Key="RequisitionNumber">[in_dt_SimpleFields.Rows(0)("RequisitionNumber").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="OrderingPhysician">[in_dt_SimpleFields.Rows(0)("OrderingPhysician").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Phys Address">[in_dt_SimpleFields.Rows(0)("Phys Address").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Patient Name">[in_dt_SimpleFields.Rows(0)("Patient Name").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="DateOfBirth">[in_dt_SimpleFields.Rows(0)("DateOfBirth").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="MRN">[in_dt_SimpleFields.Rows(0)("MRN").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="External MRN">[in_dt_SimpleFields.Rows(0)("External MRN").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Primary Ins">[in_dt_SimpleFields.Rows(0)("Primary Ins").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Primary Ins Num">[in_dt_SimpleFields.Rows(0)("Primary Ins Num").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="City">[in_dt_SimpleFields.Rows(0)("City").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Num Of Specimens">[in_dt_SimpleFields.Rows(0)("Num Of Specimens").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Site Location 1">[in_dt_SimpleFields.Rows(0)("Site Location 1").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Other 1">[in_dt_SimpleFields.Rows(0)("Other 1").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Type Of Procedure 1">[in_dt_SimpleFields.Rows(0)("Type Of Procedure 1").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Physical Exam 1">[in_dt_SimpleFields.Rows(0)("Physical Exam 1").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Site Location 2">[in_dt_SimpleFields.Rows(0)("Site Location 2").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Other 2">[in_dt_SimpleFields.Rows(0)("Other 2").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Type Of Procedure 2">[in_dt_SimpleFields.Rows(0)("Type Of Procedure 2").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Physical Exam 2">[in_dt_SimpleFields.Rows(0)("Physical Exam 2").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="CollectionDate">[in_dt_SimpleFields.Rows(0)("CollectionDate").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="ZipCode">[in_dt_SimpleFields.Rows(0)("ZipCode").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="HomePhone">[in_dt_SimpleFields.Rows(0)("HomePhone").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="FilePath">[in_TransactionItem.SpecificContent("FilePath").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Address">[in_dt_SimpleFields.Rows(0)("Address").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="Gender">[in_dt_SimpleFields.Rows(0)("Gender").ToString]</InArgument>
+                </ui:AddQueueItem.ItemInformation>
+              </ui:AddQueueItem>
+            </Sequence>
+          </Switch>
         </Sequence>
       </If.Then>
       <If.Else>

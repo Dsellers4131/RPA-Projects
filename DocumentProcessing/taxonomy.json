@@ -2,6 +2,7 @@
   "DataContractVersion": "1.1",
   "DocumentTypes": [
     {
+      "Connections": [],
       "DocumentTypeId": "Sagis.Pathologyforms.PathReq",
       "Group": "Sagis",
       "Category": "Pathology forms",
@@ -31,7 +32,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.collectiondate",
@@ -52,7 +54,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.RequisitionNumber",
@@ -73,7 +76,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.PMS",
@@ -94,7 +98,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.EMR",
@@ -115,7 +120,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.Laboratory",
@@ -136,7 +142,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.LastName",
@@ -157,7 +164,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.FirstName",
@@ -178,7 +186,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.MiddleName",
@@ -199,7 +208,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.DateOfBirth",
@@ -220,7 +230,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.Gender",
@@ -241,7 +252,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.Address",
@@ -262,7 +274,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.State",
@@ -283,7 +296,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.City",
@@ -304,7 +318,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.ZipCode",
@@ -325,7 +340,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.HomePhone",
@@ -346,7 +362,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.RequisitionDetails",
@@ -365,7 +382,8 @@
               "SetValues": [],
               "Metadata": [],
               "RuleSet": null,
-              "DefaultValue": ""
+              "DefaultValue": "",
+              "DataSource": null
             },
             {
               "FieldId": "Sagis.Pathologyforms.PathReq.RequisitionDetails.Procedure",
@@ -377,7 +395,8 @@
               "SetValues": [],
               "Metadata": [],
               "RuleSet": null,
-              "DefaultValue": ""
+              "DefaultValue": "",
+              "DataSource": null
             },
             {
               "FieldId": "Sagis.Pathologyforms.PathReq.RequisitionDetails.ClinicalInformation",
@@ -389,7 +408,8 @@
               "SetValues": [],
               "Metadata": [],
               "RuleSet": null,
-              "DefaultValue": ""
+              "DefaultValue": "",
+              "DataSource": null
             },
             {
               "FieldId": "Sagis.Pathologyforms.PathReq.RequisitionDetails.ICD",
@@ -401,7 +421,8 @@
               "SetValues": [],
               "Metadata": [],
               "RuleSet": null,
-              "DefaultValue": ""
+              "DefaultValue": "",
+              "DataSource": null
             }
           ],
           "SetValues": [],
@@ -416,7 +437,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.OrderingPhysician",
@@ -437,7 +459,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.Hospital",
@@ -458,7 +481,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.SubscriberName_PrimaryInsurance",
@@ -479,7 +503,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.PrimaryInsurance_Relationship",
@@ -500,7 +525,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.PrimaryInsurance_SubDOB",
@@ -521,7 +547,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.BillTo",
@@ -542,7 +569,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.PrimaryInsurance_ContractNumber",
@@ -563,7 +591,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.PrimaryInsurance_MemberID",
@@ -584,7 +613,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.PrimaryInsurance_StreetAddress",
@@ -605,7 +635,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.PrimaryInsurance_City",
@@ -626,7 +657,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.PrimaryInsurance_State",
@@ -647,7 +679,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.PrimaryInsurance_ZipCode",
@@ -668,7 +701,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.SecondaryInsurance_SubscriberName",
@@ -689,7 +723,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.SecondaryInsurance_Relationship",
@@ -710,7 +745,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.SecondaryInsurance_SubDOB",
@@ -731,7 +767,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.SecondaryInsurance_CompanyName",
@@ -752,7 +789,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.SecondaryInsurance_ContractNumber",
@@ -773,7 +811,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.SecondaryInsurance_MemberID",
@@ -794,7 +833,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.SecondaryInsurance_StreetAddress",
@@ -815,7 +855,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.SecondaryInsurance_City",
@@ -836,7 +877,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.SecondaryInsurance_State",
@@ -857,7 +899,8 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
         },
         {
           "FieldId": "Sagis.Pathologyforms.PathReq.SecondaryInsurance_ZipCode",
@@ -878,7 +921,616 @@
             }
           ],
           "RuleSet": null,
-          "DefaultValue": ""
+          "DefaultValue": "",
+          "DataSource": null
+        }
+      ]
+    },
+    {
+      "Connections": [],
+      "DocumentTypeId": "Sagis.Pathologyforms.EzDerm",
+      "Group": "Sagis",
+      "Category": "Pathology forms",
+      "Name": "EzDerm",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "Sagis.Pathologyforms.EzDerm.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.ReqNumber",
+          "FieldName": "RequisitionNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.CollectionDate",
+          "FieldName": "CollectionDate",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#a8b266"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "6"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.Phys",
+          "FieldName": "OrderingPhysician",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "h"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.Hospital",
+          "FieldName": "Hospital",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#ebc022"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "7"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.City",
+          "FieldName": "City",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b340ea"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "j"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.ZipCode",
+          "FieldName": "ZipCode",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#81c9c5"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "5"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.HomePhone",
+          "FieldName": "HomePhone",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8c357a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.PhysAddress",
+          "FieldName": "Phys Address",
+          "IsMultiValue": false,
+          "Type": "Address",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "y"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.PatientName",
+          "FieldName": "Patient Name",
+          "IsMultiValue": false,
+          "Type": "Name",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#525afc"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.Gender",
+          "FieldName": "Gender",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#a7bd22"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "#"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.DOB",
+          "FieldName": "DateOfBirth",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#35e08e"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "q"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.Address",
+          "FieldName": "Address",
+          "IsMultiValue": false,
+          "Type": "Address",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#ba9ea0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "@"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.MRN",
+          "FieldName": "MRN",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#ae1ccb"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "m"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.ExternalMRN",
+          "FieldName": "External MRN",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6adc5c"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "x"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.PrimaryIns",
+          "FieldName": "Primary Ins",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#e157e4"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "w"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.PrimaryInsNum",
+          "FieldName": "Primary Ins Num",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5760e1"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "g"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.SecondaryInsurance_CompanyName",
+          "FieldName": "SecondaryInsurance_CompanyName",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#e64cab"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "8"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.SecondaryInsurance_Num",
+          "FieldName": "SecondaryInsurance_Num",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#998477"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "9"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.NumofSpecimens",
+          "FieldName": "Num of Specimens",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c51cc5"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.SiteLocation1",
+          "FieldName": "Site Location 1",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#bd92d7"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "1"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.Other1",
+          "FieldName": "Other 1",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6bbab4"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "k"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.TypeOfProcedure1",
+          "FieldName": "Type Of Procedure 1",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#735fca"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.PhysicalExam1",
+          "FieldName": "Physical Exam 1",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#e69c62"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "z"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.SiteLocation2",
+          "FieldName": "Site Location 2",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#2bdf67"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "2"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.Other2",
+          "FieldName": "Other 2",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#9495b7"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.TypeOfProcedure2",
+          "FieldName": "Type Of Procedure 2",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#70d4f4"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "3"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Sagis.Pathologyforms.EzDerm.PhysicalExam2",
+          "FieldName": "Physical Exam 2",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#aa9785"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "4"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
         }
       ]
     }
