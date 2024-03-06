@@ -2094,7 +2094,7 @@
                           <ui:SelectFile DisplayName="Select Document for Processing" Filter="All files (*.*)|*.*" sap:VirtualizedContainerService.HintSize="334,138" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[in_TargetFile]" />
                         </If.Then>
                         <If.Else>
-                          <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="300,81.14285714285714" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                          <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_67">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2440,45 +2440,19 @@
                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Post-extraction &amp;&#xA;Data Export" DisplayName="Export" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_83" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\70_Export.xaml">
                                                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                                                    <InArgument x:TypeArguments="p:ExtractionResult" x:Key="in_ExtractionResults">
-                                                                                      <VisualBasicValue x:TypeArguments="p:ExtractionResult" ExpressionText="extractionResults" />
-                                                                                    </InArgument>
-                                                                                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_Config">
-                                                                                      <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="config" />
-                                                                                    </InArgument>
-                                                                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_MaxAttempts">
-                                                                                      <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="maxAttempts" />
-                                                                                    </InArgument>
-                                                                                    <InArgument x:TypeArguments="x:TimeSpan" x:Key="in_RetryInterval">
-                                                                                      <VisualBasicValue x:TypeArguments="x:TimeSpan" ExpressionText="retryInterval" />
-                                                                                    </InArgument>
-                                                                                    <InArgument x:TypeArguments="x:String" x:Key="in_str_ExtractionStatus">
-                                                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="If(extractionSuccessFlag,&quot;SUCCESS&quot;,&quot;EXCEPTION&quot;)" />
-                                                                                    </InArgument>
-                                                                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_int_ActionCenterAttempts">
-                                                                                      <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="int_ActionCenterAttempts" />
-                                                                                    </InArgument>
-                                                                                    <InArgument x:TypeArguments="x:String" x:Key="in_str_ExceptionDetails">
-                                                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_ExceptionDetails" />
-                                                                                    </InArgument>
-                                                                                    <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">
-                                                                                      <VisualBasicValue x:TypeArguments="ui:QueueItem" ExpressionText="TransactionItem" />
-                                                                                    </InArgument>
-                                                                                    <InOutArgument x:TypeArguments="p:ExtractionResult" x:Key="io_ExtractionResults">
-                                                                                      <VisualBasicReference x:TypeArguments="p:ExtractionResult" ExpressionText="io_ExtractionResults" />
-                                                                                    </InOutArgument>
-                                                                                    <InArgument x:TypeArguments="x:String" x:Key="in_strPatientsName">
-                                                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="In_strPatientName" />
-                                                                                    </InArgument>
-                                                                                    <InArgument x:TypeArguments="x:String" x:Key="InputDialogueName">
-                                                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InputDialogueName" />
-                                                                                    </InArgument>
-                                                                                    <InOutArgument x:TypeArguments="x:String" x:Key="io_FormType">
-                                                                                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_FormType" />
-                                                                                    </InOutArgument>
-                                                                                    <InArgument x:TypeArguments="x:String" x:Key="in_DocumentType">
-                                                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_DocumentType" />
-                                                                                    </InArgument>
+                                                                                    <InArgument x:TypeArguments="p:ExtractionResult" x:Key="in_ExtractionResults">[extractionResults]</InArgument>
+                                                                                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_Config">[config]</InArgument>
+                                                                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_MaxAttempts">[maxAttempts]</InArgument>
+                                                                                    <InArgument x:TypeArguments="x:TimeSpan" x:Key="in_RetryInterval">[retryInterval]</InArgument>
+                                                                                    <InArgument x:TypeArguments="x:String" x:Key="in_str_ExtractionStatus">[If(extractionSuccessFlag,"SUCCESS","EXCEPTION")]</InArgument>
+                                                                                    <InArgument x:TypeArguments="x:Int32" x:Key="in_int_ActionCenterAttempts">[int_ActionCenterAttempts]</InArgument>
+                                                                                    <InArgument x:TypeArguments="x:String" x:Key="in_str_ExceptionDetails">[str_ExceptionDetails]</InArgument>
+                                                                                    <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[TransactionItem]</InArgument>
+                                                                                    <InOutArgument x:TypeArguments="p:ExtractionResult" x:Key="io_ExtractionResults">[io_ExtractionResults]</InOutArgument>
+                                                                                    <InArgument x:TypeArguments="x:String" x:Key="in_strPatientsName">[In_strPatientName]</InArgument>
+                                                                                    <InArgument x:TypeArguments="x:String" x:Key="InputDialogueName">[InputDialogueName]</InArgument>
+                                                                                    <InOutArgument x:TypeArguments="x:String" x:Key="io_FormType">[io_FormType]</InOutArgument>
+                                                                                    <InArgument x:TypeArguments="x:String" x:Key="in_DocumentType">[in_DocumentType]</InArgument>
                                                                                   </ui:InvokeWorkflowFile.Arguments>
                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2800,33 +2774,17 @@
                                                                       </ui:InvokeWorkflowFile>
                                                                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="BusinessWorkflows\AddToQueue.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_95" UnSafe="False" WorkflowFileName="BusinessWorkflows\AddToQueue.xaml">
                                                                         <ui:InvokeWorkflowFile.Arguments>
-                                                                          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_Config">
-                                                                            <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="config" />
-                                                                          </InArgument>
+                                                                          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_Config">[config]</InArgument>
                                                                           <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_SimpleFields" />
                                                                           <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_RequsitionTable" />
-                                                                          <InArgument x:TypeArguments="x:String" x:Key="in_str_ExtractionStatus">
-                                                                            <Literal x:TypeArguments="x:String">EXCEPTION</Literal>
-                                                                          </InArgument>
-                                                                          <InArgument x:TypeArguments="x:String" x:Key="in_str_ExceptionDetails">
-                                                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="exception.Source+&quot; - &quot;+exception.Message" />
-                                                                          </InArgument>
-                                                                          <InArgument x:TypeArguments="x:String" x:Key="in_str_ActionCenterAttempts">
-                                                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="int_ActionCenterAttempts.ToString" />
-                                                                          </InArgument>
-                                                                          <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">
-                                                                            <VisualBasicValue x:TypeArguments="ui:QueueItem" ExpressionText="TransactionItem" />
-                                                                          </InArgument>
-                                                                          <InArgument x:TypeArguments="x:String" x:Key="in_strPatientName">
-                                                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="In_strPatientName" />
-                                                                          </InArgument>
+                                                                          <InArgument x:TypeArguments="x:String" x:Key="in_str_ExtractionStatus">EXCEPTION</InArgument>
+                                                                          <InArgument x:TypeArguments="x:String" x:Key="in_str_ExceptionDetails">[exception.Source+" - "+exception.Message]</InArgument>
+                                                                          <InArgument x:TypeArguments="x:String" x:Key="in_str_ActionCenterAttempts">[int_ActionCenterAttempts.ToString]</InArgument>
+                                                                          <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[TransactionItem]</InArgument>
+                                                                          <InArgument x:TypeArguments="x:String" x:Key="in_strPatientName">[In_strPatientName]</InArgument>
                                                                           <InArgument x:TypeArguments="x:String" x:Key="InputDialogueName" />
-                                                                          <InOutArgument x:TypeArguments="x:String" x:Key="io_FormType">
-                                                                            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_FormType" />
-                                                                          </InOutArgument>
-                                                                          <InArgument x:TypeArguments="x:String" x:Key="in_DocumentType">
-                                                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_DocumentType" />
-                                                                          </InArgument>
+                                                                          <InOutArgument x:TypeArguments="x:String" x:Key="io_FormType">[io_FormType]</InOutArgument>
+                                                                          <InArgument x:TypeArguments="x:String" x:Key="in_DocumentType">[in_DocumentType]</InArgument>
                                                                         </ui:InvokeWorkflowFile.Arguments>
                                                                       </ui:InvokeWorkflowFile>
                                                                     </Sequence>
@@ -2989,7 +2947,7 @@
                                 <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
                                 <x:Double x:Key="StateContainerWidth">909</x:Double>
                                 <x:Double x:Key="StateContainerHeight">720.5</x:Double>
-                                <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 240,107.5 240,279 491,279 491,309</av:PointCollection>
+                                <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 240,107.5 240,279.00000000000006 491,279.00000000000006 491,309</av:PointCollection>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -3914,7 +3872,7 @@
                                         <Transition DisplayName="New Transaction" sap:VirtualizedContainerService.HintSize="450,799" sap2010:WorkflowViewState.IdRef="Transition_3">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:PointCollection x:Key="ConnectorLocation">543,431 543,461 565,461 565,519</av:PointCollection>
+                                              <av:PointCollection x:Key="ConnectorLocation">543,431 543,461.00000000000006 565,461.00000000000006 565,519</av:PointCollection>
                                               <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
                                               <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
                                             </scg:Dictionary>
@@ -3961,19 +3919,11 @@
                                                       </ui:CommentOut>
                                                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke VitaldxEnterAccessionDetails workflow" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_102" UnSafe="False" WorkflowFileName="DataManagement\VitaldxEnterAccessionDetails.xaml">
                                                         <ui:InvokeWorkflowFile.Arguments>
-                                                          <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">
-                                                            <VisualBasicValue x:TypeArguments="ui:QueueItem" ExpressionText="TransactionItemVitalDX" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-                                                            <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="dis_config" />
-                                                          </InArgument>
+                                                          <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[TransactionItemVitalDX]</InArgument>
+                                                          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[dis_config]</InArgument>
                                                           <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
-                                                          <InArgument x:TypeArguments="x:String" x:Key="InputDialogueName">
-                                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="InputDialogueName" />
-                                                          </InArgument>
-                                                          <InArgument x:TypeArguments="x:String" x:Key="in_FormType">
-                                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="io_FormType" />
-                                                          </InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="InputDialogueName">[InputDialogueName]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_FormType">[io_FormType]</InArgument>
                                                         </ui:InvokeWorkflowFile.Arguments>
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -4314,11 +4264,6 @@
                                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="810,141" sap2010:WorkflowViewState.IdRef="LogMessage_171" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;StrFilePath &quot; +strFilePath]" />
                                                       <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;S:\SagisDX\All\RPA Accessioning\Bot Derm Reqs\&quot; +system.datetime.now.tostring(&quot;MMM&quot;) +&quot; &quot;+ system.datetime.now.ToString(&quot;yyyy&quot;)+&quot;\&quot;+ &quot;Processed &quot;+system.datetime.now.ToString(&quot;M.d.yy&quot;)]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="810,159" sap2010:WorkflowViewState.IdRef="MoveFile_2" Path="[&quot;S:\SagisDX\All\RPA Accessioning\Bot Derm Reqs\&quot;+system.datetime.now.tostring(&quot;MMM&quot;) +&quot; &quot;+ system.datetime.now.ToString(&quot;yyyy&quot;)+&quot;\&quot;+system.datetime.now.ToString(&quot;M.d.yy&quot;)+&quot;/&quot;+InputDialogueName+ &quot;.pdf&quot;]" />
                                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="810,141" sap2010:WorkflowViewState.IdRef="LogMessage_175" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Timestamp At Start of Next Form: &quot;+ System.DateTime.Now.ToString(&quot;dd-MM-yyyy hh:mm:ss&quot;)]" />
-                                                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="810,239" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="[&quot;Please Type In The Patient To Process&quot;+ Environment.NewLine+ &quot;LastName, FirstName&quot;]" Title="What Patient Will We Be Processing First?">
-                                                        <ui:InputDialog.Result>
-                                                          <OutArgument x:TypeArguments="x:String">[InputDialogueName]</OutArgument>
-                                                        </ui:InputDialog.Result>
-                                                      </ui:InputDialog>
                                                       <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="810,52" sap2010:WorkflowViewState.IdRef="CommentOut_69">
                                                         <ui:CommentOut.Body>
                                                           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,103" sap2010:WorkflowViewState.IdRef="Sequence_377">
@@ -4336,7 +4281,7 @@
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                       </ui:CommentOut>
-                                                      <If Condition="[DuQueueItemsInt.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="810,2307" sap2010:WorkflowViewState.IdRef="If_35">
+                                                      <If Condition="[DuQueueItemsInt.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="810,2586" sap2010:WorkflowViewState.IdRef="If_35">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4344,13 +4289,13 @@
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                         <If.Then>
-                                                          <Sequence sap:VirtualizedContainerService.HintSize="776,1952" sap2010:WorkflowViewState.IdRef="Sequence_346">
+                                                          <Sequence sap:VirtualizedContainerService.HintSize="776,2231" sap2010:WorkflowViewState.IdRef="Sequence_346">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                            <Sequence sap2010:Annotation.AnnotationText="* DU Form extraction" DisplayName="DU Process" sap:VirtualizedContainerService.HintSize="734,1864" sap2010:WorkflowViewState.IdRef="Sequence_348">
+                                                            <Sequence sap2010:Annotation.AnnotationText="* DU Form extraction" DisplayName="DU Process" sap:VirtualizedContainerService.HintSize="734,2143" sap2010:WorkflowViewState.IdRef="Sequence_348">
                                                               <Sequence.Variables>
                                                                 <Variable x:TypeArguments="x:TimeSpan" Name="retryInterval" />
                                                                 <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="config" />
@@ -4365,6 +4310,11 @@
                                                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
+                                                              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="672,239" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="[&quot;Please Type In The Patient To Process&quot;+ Environment.NewLine+ &quot;LastName, FirstName&quot;]" Title="What Patient Will We Be Processing First?">
+                                                                <ui:InputDialog.Result>
+                                                                  <OutArgument x:TypeArguments="x:String">[InputDialogueName]</OutArgument>
+                                                                </ui:InputDialog.Result>
+                                                              </ui:InputDialog>
                                                               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Read the config file first; all Log &amp; Exception messages are defined there" DisplayName="ReadConfigFile" sap:VirtualizedContainerService.HintSize="672,155" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_104" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\00_ReadConfigFile.xaml">
                                                                 <ui:InvokeWorkflowFile.Arguments>
                                                                   <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
@@ -4540,7 +4490,7 @@
                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                           <av:Point x:Key="ShapeLocation">90,467.1666666666667</av:Point>
                                                                                           <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                                                                          <av:PointCollection x:Key="ConnectorLocation">190,519.1666666666667 190,549.1666666666666 189.5,549.1666666666666 189.5,559.9666666666667</av:PointCollection>
+                                                                                          <av:PointCollection x:Key="ConnectorLocation">190,519.1666666666667 190,549.1666666666666 192.5,549.1666666666666 192.5,559.9666666666667</av:PointCollection>
                                                                                         </scg:Dictionary>
                                                                                       </sap:WorkflowViewStateService.ViewState>
                                                                                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Classify documents &amp; check if human intervention is needed" DisplayName="Classify" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_108" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\30_Classify.xaml">
@@ -4566,11 +4516,11 @@
                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                               <av:Point x:Key="ShapeLocation">78,559.9666666666667</av:Point>
-                                                                                              <av:Size x:Key="ShapeSize">223,52</av:Size>
-                                                                                              <av:PointCollection x:Key="ConnectorLocation">189.5,611.9666666666667 189.5,641.9666666666667 190.22222222222223,641.9666666666667 190.22222222222223,658.6666666666666</av:PointCollection>
+                                                                                              <av:Size x:Key="ShapeSize">229,52</av:Size>
+                                                                                              <av:PointCollection x:Key="ConnectorLocation">192.5,611.9666666666667 192.5,641.9666666666667 190.22222222222223,641.9666666666667 190.22222222222223,658.6666666666666</av:PointCollection>
                                                                                             </scg:Dictionary>
                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Classification Business Rule Validation" DisplayName="Classification Rules Check" sap:VirtualizedContainerService.HintSize="223,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_109" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\35_ClassificationBusinessRuleValidation.xaml">
+                                                                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Classification Business Rule Validation" DisplayName="Classification Rules Check" sap:VirtualizedContainerService.HintSize="229,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_109" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\35_ClassificationBusinessRuleValidation.xaml">
                                                                                             <ui:InvokeWorkflowFile.Arguments>
                                                                                               <InArgument x:TypeArguments="x:String" x:Key="in_TargetDocument">[in_TargetFile]</InArgument>
                                                                                               <InArgument x:TypeArguments="p1:DocumentTaxonomy" x:Key="in_DocTaxonomy">[docTaxonomy]</InArgument>
@@ -4594,7 +4544,7 @@
                                                                                                   <av:PointCollection x:Key="ConnectorLocation">190.22222222222223,710.6666666666666 190.22222222222223,740.6666666666666 190,740.6666666666666 190,768.6666666666666</av:PointCollection>
                                                                                                 </scg:Dictionary>
                                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                                              <ui:ForEach x:TypeArguments="p:ClassificationResult" sap2010:Annotation.AnnotationText="Process all documents within the input file" DisplayName="Process Each Document" sap:VirtualizedContainerService.HintSize="851,1234" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[classificationResultsArray]">
+                                                                                              <ui:ForEach x:TypeArguments="p:ClassificationResult" sap2010:Annotation.AnnotationText="Process all documents within the input file" DisplayName="Process Each Document" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[classificationResultsArray]">
                                                                                                 <ui:ForEach.Body>
                                                                                                   <ActivityAction x:TypeArguments="p:ClassificationResult">
                                                                                                     <ActivityAction.Argument>
@@ -5218,7 +5168,7 @@
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              <av:PointCollection x:Key="ConnectorLocation">543,431 543,461 216,461 216,410.6 186,410.6</av:PointCollection>
+                                              <av:PointCollection x:Key="ConnectorLocation">543,431 543,461.00000000000006 216,461.00000000000006 216,410.6 186,410.6</av:PointCollection>
                                               <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
                                               <x:Int32 x:Key="DestConnectionPointIndex">60</x:Int32>
                                             </scg:Dictionary>
