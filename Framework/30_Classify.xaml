@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>3004,2517</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>3018,2517</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_30_Classify_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="68">
